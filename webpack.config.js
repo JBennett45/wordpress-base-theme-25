@@ -3,11 +3,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    main: './assets/un-minified/js/scripts.js', // Entry point for JS
-    style: './assets/un-minified/scss/styles.scss', // Entry point for SCSS
+    main: './assets/src/js/scripts.js', // Entry point for JS
+    style: './assets/src/scss/styles.scss', // Entry point for SCSS
   },
   output: {
-    filename: 'js/script.min.js', // Output JS files to js/ folder
+    filename: 'js/[name].min.js', // Output JS files to js/ folder
     path: path.resolve(__dirname, 'assets'),
   },
   module: {
@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/style.min.css', // Output CSS files to css/ folder
+      filename: 'css/[name].min.css', // Output CSS files to css/ folder
     }),
   ],
   devServer: {
@@ -45,7 +45,7 @@ module.exports = {
     port: 9000,
     hot: true,
     open: true,
-    watchFiles: ['src/**/*'], // Watch files in the src directory
+    watchFiles: ['src/**/*'],
   },
   mode: 'development', // Use 'production' for production builds
 };
