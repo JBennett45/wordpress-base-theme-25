@@ -1,5 +1,15 @@
 {
   "name": "base-theme",
   "version": "1.0.0",
-  "description": "Starter WordPress classic theme based on ACF but supports without, built in support for on page filtering via axios.js support &amp; webpack setup for browser sync and SASS."
+  "description": "Starter WordPress classic theme based on ACF but supports without, built in support for on page filtering via axios.js support &amp; webpack setup for browser sync and SASS.",
+  "scripts": {
+    "dev": "npx mix watch",
+    "production": "mix --production"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.88.0",
+    "sass-loader": "^12.6.0"
+  }
 }
