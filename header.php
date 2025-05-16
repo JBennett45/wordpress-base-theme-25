@@ -6,11 +6,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta property="og:type" content="website">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <header>
+  <header id="base-master-hdr-cst">
     <?php get_template_part( 'template-parts/header/header-content' ); ?>
   </header>
 <main>

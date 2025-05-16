@@ -1,0 +1,16 @@
+// using import for now, replace with custom font or the import for your project //
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-declaration: "Roboto", sans-serif;
+
+body {
+  font-family: $font-declaration;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size:1em;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight:700;
+}
