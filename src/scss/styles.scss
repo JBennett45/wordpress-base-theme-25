@@ -1,6 +1,9 @@
-body {
-  border: 5px solid red;
-  margin:0;
-  padding:20px;
-}
+// [0] Globals //
+@use "global/normalize";
+@use "global/project_global";
+@use "global/wp_image_alignment";
 
+// [1] Global Parts //
+
+// [2] Template Parts //
+@use "global-parts/header";

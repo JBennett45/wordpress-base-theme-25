@@ -1,0 +1,15 @@
+#base-master-hdr-cst {
+  border:5px solid black;
+  padding:25px 0;
+  .container-cst {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-wrapp-cst {
+      border:1px solid red;
+    }
+    .menu-wrapp-cst {
+      border:1px solid blue;
+    }
+  }
+}
