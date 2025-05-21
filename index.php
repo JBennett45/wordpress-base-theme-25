@@ -1,8 +1,5 @@
 <?php
 get_header();
-
-
-echo 'hello world';
-
+// nothing to see here yet //
 get_footer();
 ?>
