@@ -3,6 +3,6 @@
     <span>Logo</span>
   </div>
   <div class="menu-wrapp-cst">
-    <span>Menu will go here.</span>
+    <?php jbfunction_check_menu_exists('Header Menu', true); ?>
   </div>
 </div>

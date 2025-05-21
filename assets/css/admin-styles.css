@@ -1,0 +1,8 @@
+/* Centralise Post Thumbnail Crop */
+#set-post-thumbnail {
+  display: block !important;
+}
+#set-post-thumbnail img {
+  display: block !important;
+  margin:0 auto !important;
+}

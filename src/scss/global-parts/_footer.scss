@@ -1,0 +1,11 @@
+@use "./../global/colour_scheme" as *;
+#base-master-fttr-cst {
+  border-top: 4px solid $mainBG;
+  margin-top: 25px;
+  padding:50px 0;
+  .container-cst {
+    .logo-wrapp-cst {
+      text-align: center;
+    }
+  }
+}

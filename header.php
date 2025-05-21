@@ -11,7 +11,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <header id="base-master-hdr-cst">
-    <?php get_template_part( 'template-parts/header/header-content' ); ?>
-  </header>
+<header id="base-master-hdr-cst">
+  <?php get_template_part( 'template-parts/header/header-content' ); ?>
+</header>
 <main>
