@@ -12,4 +12,21 @@ function jbfunction_check_menu_exists($menuName, $navWrapper) {
     if($navWrapper) { echo '</nav>'; }
   }
 }
+// [1] ACF - return active field with tag (h tag etc) //
+function returnActiveField($field, $tag) {
+  if(class_exists('ACF')) {
+    if($field) { 
+      if($tag) { 
+          echo '<' . $tag . '>' . $field . '</' . $tag . '>';
+        return;
+      } else {
+        echo $field;
+        return;
+      }
+    }
+  } 
+  else {
+    echo 'ACF isn\'t active, please install and activate the plugin or don\'t use this helper function.';
+  }
+}
 ?>
