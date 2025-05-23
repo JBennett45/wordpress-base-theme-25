@@ -26,7 +26,7 @@ function returnActiveField($field, $tag) {
     }
   } 
   else {
-    echo 'ACF isn\'t active, please install and activate the plugin or don\'t use this helper function.';
+    echo 'Error #1: ACF helper function used without plugin instance.';
   }
 }
 ?>
