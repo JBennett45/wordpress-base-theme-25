@@ -21,3 +21,6 @@ The SRC directory is where uncompressed files are kept and the the assets folder
 I've numbered each error to help you narrow down an issue should one arrise, because this is a starter theme, really the only issues will be down to plugin clashes or a dependency not being active. As mentioned above I recommend developing with debug on to catch any core errors. 
 
 **Error #1.** An ACF helper has been used without the plugin being installed or active, either remove the helper function or install/activate ACF.
+
+# Menus 
+To instigate a menu instance, for ease you can use the helper function _jbfunction_check_menu_exists_ - this accepts three arguments, Menu Name, Classname and Chevrons boolean. The menu name should match you WordPress appearence menu name, the other two are optional, the chevron boolean will show for qualifying dropdown items up to three tiers deep as you can see in the demo of the header. CSS for controlling this is managed in a different file to the style files so you don't need to edit the functional CSS unless you need to. 

@@ -17,24 +17,43 @@
     }
     .menu-wrapp-cst {
       height:100%;
-      border:1px solid red;
-      nav {
-        height:100%;
+      // add styles here, hover functionality is taken from global class in key_fundamentals //
+       nav {
         ul {
-          height:100%;
-          display: flex;
-          align-items: center;
           li {
-            display: inline-block;
-            height:100%;
             a {
-              color: inherit;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height:100%; width:100%;
-              padding:15px; 
-              text-decoration: none;
+              font-weight: 700;
+              color: $white;
+            }
+            .sub-menu {
+              background-color: $white;
+              border: 1px solid $mainBG;
+              border-top:0;
+              li {
+                display: block;
+                border-bottom:1px solid $mainBG;
+                a {
+                  color: $onxy;
+                  font-weight:400; 
+                }
+                .sub-menu {
+                  border-top:1px solid $mainBG;
+                  a {
+                    color: $mainBG;
+                  }
+                }
+              }
+              .bst-opt-chevron-active-cst {
+                svg {
+                  fill: $mainBG;
+                }
+              }
+            }
+            // change the colour of the chvron without needing to change asset //
+            .bst-opt-chevron-active-cst {
+              svg {
+                fill: $white;
+              }
             }
           }
         }
