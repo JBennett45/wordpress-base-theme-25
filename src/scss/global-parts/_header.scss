@@ -43,6 +43,17 @@
                   }
                 }
               }
+              .bst-opt-chevron-active-cst {
+                svg {
+                  fill: $mainBG;
+                }
+              }
+            }
+            // change the colour of the chvron without needing to change asset //
+            .bst-opt-chevron-active-cst {
+              svg {
+                fill: $white;
+              }
             }
           }
         }

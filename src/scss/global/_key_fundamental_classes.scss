@@ -47,14 +47,50 @@
                 left: 100%;
                 top:0;
                 transition: 0.25s all;
+                li {
+                  .sub-menu {
+                    // prevent further, only support three tier //
+                    display: none; 
+                  }
+                }
               }
               &:last-child {
                 border-bottom: 0;
               }
             }
           }
+          // Drodown chevs //
+          .bst-opt-chevron-active-cst {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height:100%;
+            margin: 0 0 0 5px;
+            svg {
+              width:12px; height:12px;
+            }
+          }
         }
         .menu-item-has-children {
+          .sub-menu {
+            .bst-opt-chevron-active-cst {
+              display: none;
+            }
+            .menu-item-has-children {
+              .bst-opt-chevron-active-cst {
+                display: flex;
+                transform: rotate(-90deg);
+                margin: 0 0 0 auto;
+              }
+              li {
+                // prevent further, only support three tier //
+                .bst-opt-chevron-active-cst {
+                  display: none; 
+                }
+              }
+            }
+            
+          }
           &:hover {
             .sub-menu {
               visibility: visible;
@@ -65,13 +101,16 @@
                   opacity: 0;
                 }
                 &:hover {
-                   .sub-menu {
-                   visibility: visible;
-              opacity: 1;
+                  .sub-menu {
+                    visibility: visible;
+                    opacity: 1;
                   }
                 }
               }
             }
+          }
+          .bst-opt-chevron-active-cst {
+            display: flex;
           }
         }
       }
