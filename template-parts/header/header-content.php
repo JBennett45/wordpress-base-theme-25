@@ -1,6 +1,8 @@
 <div class="container-cst">
   <div class="logo-wrapp-cst">
-    <span>Logo</span>
+    <a href="<?php echo get_home_url(); ?>">
+      <span>Logo</span>
+    </a>
   </div>
   <div class="menu-wrapp-cst">
     <?php jbfunction_check_menu_exists('Header Menu', 'hdr-optional-class', true); ?>
