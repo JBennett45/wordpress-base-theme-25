@@ -5,6 +5,6 @@
     </a>
   </div>
   <div class="menu-wrapp-cst">
-    <?php jbfunction_check_menu_exists('Header Menu', 'hdr-optional-class', true); ?>
+    <?php jbcst_wp_return_wpmenu('Header Menu', 'hdr-optional-class', true); ?>
   </div>
 </div>

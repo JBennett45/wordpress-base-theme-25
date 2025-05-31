@@ -1,6 +1,6 @@
 <?php 
 // [0] Get & Return Menu based off title, optional class for chevron // 
-function jbfunction_check_menu_exists($menuName, $className, $chevron) {
+function jbcst_wp_return_wpmenu($menuName, $className, $chevron) {
   $menuReturn = wp_get_nav_menu_object($menuName);
   if(!$className) { $className = 'insert-nav-class-here'; }
   if(!$chevron) { $chevron = ''; }
@@ -24,7 +24,7 @@ function jbfunction_check_menu_exists($menuName, $className, $chevron) {
   }
 }
 // [1] ACF - return active field with tag (h tag etc) //
-function returnActiveField($field, $tag) {
+function jbcst_acf_return_text_field($field, $tag) {
   if(class_exists('ACF')) {
     if($field) { 
       if($tag) { 
