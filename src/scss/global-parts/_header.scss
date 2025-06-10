@@ -17,7 +17,7 @@
     }
     .menu-wrapp-cst {
       height:100%;
-      // add styles here, hover functionality is taken from global class in key_fundamentals //
+      // add styles here, hover functionality is taken from global class in key fundamentals //
        nav {
         ul {
           li {
@@ -61,6 +61,34 @@
       }
       @media only screen and (max-width: 998px) {
         display: none;
+      }
+    }
+    .mbl-toggle-wrapp {
+      display: none;
+      width:30px;
+      z-index: 99;
+      cursor: pointer;
+      span {
+        display: block; 
+        border: none;
+        height: 3px;
+        width: 100%;
+        transition:  all .35s ease;
+        background-color: $white;
+        &:nth-of-type(2) {
+          margin-top: 7px;
+        }
+        &:nth-of-type(3) {
+          margin-top: 7px;
+        }
+      }
+      &.mbl-toggle-activated {
+        span {
+          background-color: green;
+        }
+      }
+      @media only screen and (max-width: 998px) {
+        display: block;
       }
     }
   }
