@@ -11,6 +11,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php get_template_part( 'template-parts/overlays/mobile-menu' ); ?>
 <header id="base-master-hdr-cst" class="cst-desktop-menu-glb-spt">
   <?php get_template_part( 'template-parts/header/header-content' ); ?>
 </header>
