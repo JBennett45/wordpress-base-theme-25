@@ -1,6 +1,9 @@
 @use "./../global/colour_scheme" as *;
 #base-master-hdr-cst {
   background-color: $mainBG;
+  position: fixed;
+  width:100%;
+  top:0;
   .container-cst {
     display: flex;
     align-items: center;
