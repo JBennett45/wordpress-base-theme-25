@@ -1,0 +1,27 @@
+@use "./../global/colour_scheme" as *;
+
+#mbl-menu-ovrr-wrapp {
+  position: fixed;
+  z-index:50;
+  background-color: $mainBG;;
+  top: 75px; // or change to your header height //
+  left: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  opacity: 0;
+  visibility: hidden;
+  overflow: scroll;
+  transition: 0.5s all;
+
+  overflow: hidden;
+
+  // active //
+  &.activated-mbl-menu-ovrr-wrapp {
+    opacity: 1;
+    visibility: visible;
+  }
+  // don't allow to show when the desktop menu is available (so block to the same query you as desktop) // 
+  @media only screen and (min-width: 998px) {
+    display: none;
+  }
+}

@@ -20,15 +20,40 @@
     }
     .menu-wrapp-cst {
       height:100%;
-      // add styles here, hover functionality is taken from global class in key fundamentals //
-       nav {
+      nav {
+        height:100%;
         ul {
+          height:100%;
           li {
+            position: relative;
+            display: inline-block;
+            height:100%;
             a {
+              color: inherit;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height:100%; 
+              width:100%;
+              padding:15px; 
+              // styling //
+              text-decoration: none;
               font-weight: 700;
               color: $white;
             }
+            // Dropdown hover control //
             .sub-menu {
+              visibility: hidden;
+              opacity: 0;
+              position: absolute;
+              z-index: 10;
+              height:auto !important;
+              left:0;
+              top:100%;
+              width:auto;
+              white-space: nowrap; 
+              transition: 0.25s all;
+              // add dropdwon styles here //
               background-color: $white;
               border: 1px solid $mainBG;
               border-top:0;
@@ -37,24 +62,88 @@
                 display: block;
                 border-bottom:1px solid $mainBG;
                 a {
+                  justify-content: flex-start;
+                  // styling //
                   color: $onxy;
                   font-weight:400; 
                 }
                 .sub-menu {
-                  border-top:1px solid $mainBG;
-                  a {
-                    color: $mainBG;
+                  left: 100%;
+                  top:0;
+                  transition: 0.25s all;
+                  li {
+                    border-top:1px solid $mainBG;
+                    a {
+                      color: $mainBG;
+                      .sub-menu {
+                        // prevent further, only support three tier //
+                        display: none; 
+                      }
+                    }
                   }
                 }
               }
+            }
+            // Drodown chevs //
+            .bst-opt-chevron-active-cst {
+              display: none;
+              align-items: center;
+              justify-content: center;
+              height:100%;
+              margin: 0 0 0 5px;
+              position: relative;
+              right:-5px;
+              svg {
+                width:12px; height:12px;
+              }
+            }
+          }
+          .menu-item-has-children {
+            .sub-menu {
               .bst-opt-chevron-active-cst {
-                svg {
-                  fill: $mainBG;
+                display: none;
+              }
+              .menu-item-has-children {
+                .bst-opt-chevron-active-cst {
+                  display: flex;
+                  transform: rotate(-90deg);
+                  margin: 0 0 0 auto;
+                  right:0;
+                  // arrow dropdown colour //
+                  svg {
+                    fill: $onxy;
+                  }
+                }
+                li {
+                  // prevent further, only support three tier //
+                  .bst-opt-chevron-active-cst {
+                    display: none; 
+                  }
+                }
+              }
+              
+            }
+            &:hover {
+              .sub-menu {
+                visibility: visible;
+                opacity: 1;
+                li {
+                  .sub-menu {
+                    visibility: hidden;
+                    opacity: 0;
+                  }
+                  &:hover {
+                    .sub-menu {
+                      visibility: visible;
+                      opacity: 1;
+                    }
+                  }
                 }
               }
             }
-            // change the colour of the chvron without needing to change asset //
             .bst-opt-chevron-active-cst {
+              display: flex;
+              // arrow desktop colour //
               svg {
                 fill: $white;
               }
