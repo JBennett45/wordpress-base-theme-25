@@ -1,11 +1,11 @@
 // [0] Globals //
 @use "global/normalize";
 @use "global/project_global";
-@use "global/key_fundamental_classes";
 @use "global/wp_image_alignment";
 
 // [1] Global Parts //
 
 // [2] Template Parts //
 @use "global-parts/header";
+@use "global-parts/mobile_menu";
 @use "global-parts/footer";
