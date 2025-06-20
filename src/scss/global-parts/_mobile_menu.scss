@@ -30,8 +30,85 @@
         li {
           border:1px solid white; 
           @include cstFont18();
+          a {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height:100%; 
+            width:100%;
+            padding:10px 15px; 
+            // styling //
+            text-decoration: none;
+            font-weight: 700;
+            color: $white;
+            @include cstFont18();
+          }
+          // dropdown //
           .sub-menu {
             display: none;
+            padding-left:15px;
+          }
+          // Drodown chevs //
+          .bst-opt-chevron-active-cst {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height:100%;
+            margin: 0 0 0 15px;
+            border:1px solid red;
+            padding:10px;
+            position: relative;
+            svg {
+              width:12px; height:12px;
+            }
+          }
+          // State - Mobile DROPDOWN is active //
+          .active-mobile-submenu-cst {
+            display: block !important;
+          }
+        }
+        .menu-item-has-children {
+          .sub-menu {
+            .bst-opt-chevron-active-cst {
+              display: none;
+            }
+            .menu-item-has-children {
+              .bst-opt-chevron-active-cst {
+                display: flex;
+              }
+              li {
+                // prevent further, only support three tier //
+                .bst-opt-chevron-active-cst {
+                  display: none; 
+                }
+              }
+            }
+          }
+          &:hover {
+            .sub-menu {
+              visibility: visible;
+              opacity: 1;
+              li {
+                .sub-menu {
+                  visibility: hidden;
+                  opacity: 0;
+                }
+                &:hover {
+                  .sub-menu {
+                    visibility: visible;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+          .bst-opt-chevron-active-cst {
+            display: flex;
+            // arrow desktop colour //
+            svg {
+              fill: $white;
+            }
           }
         }
       }
