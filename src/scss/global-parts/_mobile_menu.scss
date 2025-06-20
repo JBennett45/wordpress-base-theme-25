@@ -1,4 +1,6 @@
 @use "./../global/colour_scheme" as *;
+@use "./../mixins/global" as *;
+@use "./../mixins/font_sizes" as *;
 
 #mbl-menu-ovrr-wrapp {
   position: fixed;
@@ -8,19 +10,39 @@
   left: 0;
   width: 100%;
   height: calc(100% - 100px);
-  opacity: 0;
-  visibility: hidden;
-  overflow: scroll;
+  // opacity: 0;
+  // visibility: hidden;
   transition: 0.5s all;
 
   overflow: hidden;
 
+
+  .mbl-menu-ovrr-inner-wrapp {
+    border:2px solid red;
+    height:100%;
+    overflow-x: scroll;
+    @include removeScrollBars();
+    nav {
+      border:1px solid red;
+      height:900px;
+      ul {
+        list-style-type: none;
+        li {
+          border:1px solid white; 
+          @include cstFont18();
+          .sub-menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   // active //
   &.activated-mbl-menu-ovrr-wrapp {
     opacity: 1;
     visibility: visible;
   }
-  // don't allow to show when the desktop menu is available (so block to the same query you as desktop) // 
+  // no show on desktop or whatever breakpoint you want the hamburger to come into touch // 
   @media only screen and (min-width: 998px) {
     display: none;
   }
