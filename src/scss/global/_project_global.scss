@@ -30,7 +30,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
-// feel free to remove - this is for starter content/showcasing the base theme //
+// remove once started a project, this just adds style to the init content block //
 #base-master-default-content-cst {
 	padding:100px 0;
 	text-align: center;
@@ -38,10 +38,9 @@ a {
 	display: flex;
 	align-items: center;
 	.container-cst {
-		max-width:998px;
-		h4 {
-			font-style: italic;
-			margin-top: 50px;
+		max-width: 950px;
+		h1,h2,h3,h4,h5,h6 {
+			margin: 25px;
 		}
 	}
 }

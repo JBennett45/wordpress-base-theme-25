@@ -1,0 +1,8 @@
+// remove scroll bars //
+@mixin removeScrollBars() {
+  -webkit-overflow-scrolling: touch; 
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+}
