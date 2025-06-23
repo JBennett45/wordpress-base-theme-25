@@ -15,31 +15,38 @@ if(mobButtonToggle) {
 document.querySelectorAll('.mbl-dropdown-watcher-cst .bst-opt-chevron-active-cst').forEach((mobbutton) => {
   mobbutton.addEventListener('click', (e) => {
     e.preventDefault();
-
+    // Class vars //
     let activeDropdownClass = 'active-mobile-submenu-cst';
-    let activeChevronClass = 'active-mobile-item-cst';
-
-    // control this click event //
+    let activeItemClass = 'active-mobile-item-cst';
+    let activeChevronClass = 'active-mobile-chevron-cst';
+    // Setup click event vars //
+    let parentDropdown = mobbutton.closest('ul');
     let closestLi = mobbutton.closest('li');
+    let closestChev = mobbutton.closest('.bst-opt-chevron-active-cst');
     let closestDropdown = closestLi.querySelector('.sub-menu');
     let closestLiID = closestLi.getAttribute('ID');
-    // // remove existing classes (li) //
-    // document.querySelectorAll('.mbl-dropdown-watcher-cst li').forEach((openDropdown) => {
-    //   let thisMenuItemID = openDropdown.getAttribute('ID');
-    //   // check if its not the current item (toggle controls that) //
-    //   if(thisMenuItemID != closestLiID) {
-    //     let targetSubMenu = document.querySelector('#' + thisMenuItemID + ' .sub-menu');
-    //     // remove li //
-    //     openDropdown.classList.remove(activeChevronClass);
-    //     // remove drodown //
-    //     if(targetSubMenu) {
-    //       targetSubMenu.classList.remove(activeDropdownClass);
-    //     }
-    //   }
-    // });
-    // add class //
+    // Only close all instances if a top level item is clicked //
+    if(!parentDropdown.classList.contains('sub-menu')) {
+      document.querySelectorAll('.mbl-dropdown-watcher-cst li').forEach((openDropdown) => {
+        let thisMenuItemID = openDropdown.getAttribute('ID');
+        // check if its not the current item (toggle controls that) //
+        if(thisMenuItemID != closestLiID) {
+          let targetSubMenu = document.querySelector('#' + thisMenuItemID + ' .sub-menu');
+          let closestChevRem = openDropdown.querySelector('.bst-opt-chevron-active-cst');
+          // remove li //
+          closestChevRem.classList.remove(activeChevronClass);
+          openDropdown.classList.remove(activeItemClass);
+          // remove drodown //
+          if(targetSubMenu) {
+            targetSubMenu.classList.remove(activeDropdownClass);
+          }
+        }
+      });
+    }
+    // Add active class //
     if(!closestLi.classList.contains(activeDropdownClass)) {
-      closestLi.classList.toggle(activeChevronClass);
+      closestLi.classList.toggle(activeItemClass);
+      closestChev.classList.toggle(activeChevronClass);
       closestDropdown.classList.toggle(activeDropdownClass);
     }
   });

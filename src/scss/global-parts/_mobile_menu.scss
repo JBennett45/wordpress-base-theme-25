@@ -10,25 +10,18 @@
   left: 0;
   width: 100%;
   height: calc(100% - 100px);
-  // opacity: 0;
-  // visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
   transition: 0.5s all;
-
   overflow: hidden;
-
-
   .mbl-menu-ovrr-inner-wrapp {
-    border:2px solid red;
     height:100%;
     overflow-x: scroll;
     @include removeScrollBars();
     nav {
-      border:1px solid red;
-      height:900px;
       ul {
         list-style-type: none;
         li {
-          border:1px solid white; 
           @include cstFont18();
           a {
             color: inherit;
@@ -48,6 +41,7 @@
           .sub-menu {
             display: none;
             padding-left:15px;
+            margin-bottom: 5px;;
           }
           // Drodown chevs //
           .bst-opt-chevron-active-cst {
@@ -56,9 +50,9 @@
             justify-content: center;
             height:100%;
             margin: 0 0 0 15px;
-            border:1px solid red;
             padding:10px;
             position: relative;
+            transition: 0.3s all;
             svg {
               width:12px; height:12px;
             }
@@ -68,6 +62,11 @@
             display: block !important;
           }
         }
+        // active ITEM //
+        .active-mobile-chevron-cst {
+          transform: rotate(-180deg);
+        }
+        // Visible states of dropdowns //
         .menu-item-has-children {
           .sub-menu {
             .bst-opt-chevron-active-cst {
@@ -85,24 +84,24 @@
               }
             }
           }
-          &:hover {
-            .sub-menu {
-              visibility: visible;
-              opacity: 1;
-              li {
-                .sub-menu {
-                  visibility: hidden;
-                  opacity: 0;
-                }
-                &:hover {
-                  .sub-menu {
-                    visibility: visible;
-                    opacity: 1;
-                  }
-                }
-              }
-            }
-          }
+          // &:hover {
+          //   .sub-menu {
+          //     visibility: visible;
+          //     opacity: 1;
+          //     li {
+          //       .sub-menu {
+          //         visibility: hidden;
+          //         opacity: 0;
+          //       }
+          //       &:hover {
+          //         .sub-menu {
+          //           visibility: visible;
+          //           opacity: 1;
+          //         }
+          //       }
+          //     }
+          //   }
+          // }
           .bst-opt-chevron-active-cst {
             display: flex;
             // arrow desktop colour //

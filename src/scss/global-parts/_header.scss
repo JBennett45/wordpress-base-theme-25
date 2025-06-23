@@ -71,7 +71,7 @@
                 }
                 .sub-menu {
                   left: 100%;
-                  top:0;
+                  top:-1px;
                   transition: 0.25s all;
                   li {
                     border-top:1px solid $mainBG;
@@ -81,6 +81,9 @@
                         // prevent further, only support three tier //
                         display: none; 
                       }
+                    }
+                    &:last-child {
+                      border-top: 0;
                     }
                   }
                 }
