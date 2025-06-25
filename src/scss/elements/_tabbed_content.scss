@@ -1,0 +1,23 @@
+.tabbed-content-controller-cst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .tabbed-control-input-cst {
+    padding:10px;
+    cursor: pointer;
+  }
+  .active-tabbed-control-input-cst {
+    display: block;
+    border: 4px solid blue;
+  }
+}
+
+.tabbed-content-display-cst {
+  .tabbed-control-output-cst {
+    bordeR:4px solid green;
+    display: none;
+  }
+  .active-tabbed-control-output-cst {
+    display: block;
+  }
+}

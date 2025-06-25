@@ -4,8 +4,12 @@
 @use "global/wp_image_alignment";
 
 // [1] Global Parts //
-
-// [2] Template Parts //
 @use "global-parts/header";
 @use "global-parts/mobile_menu";
 @use "global-parts/footer";
+
+// [2] Template Parts //
+@use "template-parts/posts_wrapper";
+
+// [3] Elements (styles applied from your component, these files just control the neccessary hide/show etc) //
+@use "elements/tabbed_content";
