@@ -10,9 +10,25 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<?php get_template_part( 'template-parts/overlays/mobile-menu' ); ?>
+<?php 
+wp_body_open(); 
+get_template_part( 'template-parts/overlays/mobile-menu' ); 
+?>
 <header id="base-master-hdr-cst" class="cst-desktop-menu-glb-spt">
-  <?php get_template_part( 'template-parts/header/header-content' ); ?>
+  <div class="container-cst">
+    <div class="logo-wrapp-cst">
+      <a href="<?php echo get_home_url(); ?>">
+        <span>Logo</span>
+      </a>
+    </div>
+    <div class="menu-wrapp-cst">
+      <?php jbcst_wp_return_wpmenu('Header Menu', 'hdr-optional-class', true); ?>
+    </div>
+    <div class="mbl-toggle-wrapp">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 </header>
 <main>
