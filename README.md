@@ -22,7 +22,12 @@ The SRC directory is where uncompressed files are kept and the the assets folder
 # Installation
 The only thing I've setup after a standard WordPress install is a front page and blog listing page (and allocated them in the reading settings) & also created a header and footer menu to showcase the dropdown support. At the moment pages simply bring in starter content to allow you to either use WP query or ACF fields.
 
-Permalinks were also updated to 'post name' instead of plain.
+In the example, permalinks are set to 'post name'.
+
+# Elements 
+I've built in a couple of reusable elements that normal crop up in the UI of a custom build. Within the SCSS folder, theres an elements folder which controls essential styles for functionality like showing/hiding states but more specific styles can be applied to these in the blocks/templates you create. 
+
+**1 - Tabbed Content .** Simple pill based tabs thats control visibility states of content wrappers via a div attribute called 'data-tabid' simply use the classes supplied in the example (news page) and makes sure the tabid of both click control and content wrapper match.
 
 # Helper Functions 
 _jbcst_wp_return_wpmenu_ - a WordPress helper function that accepts three arguments, Menu Name, Classname and Chevrons boolean. The menu name should match you WordPress appearence menu name, the other two are optional, the chevron boolean will show for qualifying dropdown items up to three tiers deep as you can see in the demo of the header. CSS for controlling this is managed in a different file to the style files so you don't need to edit the functional CSS unless you need to. 
