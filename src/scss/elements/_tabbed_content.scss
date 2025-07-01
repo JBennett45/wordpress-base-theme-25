@@ -4,13 +4,15 @@
   justify-content: center;
   .tabbed-control-input-cst {
     cursor: pointer;
+    transition: 0.3s all;
     // Styles below //
-    padding:10px;
+    padding:15px;
   }
   .active-tabbed-control-input-cst {
     display: block;
     // Styles below //
     background-color: #eee;
+    font-weight: 700;
   }
 }
 

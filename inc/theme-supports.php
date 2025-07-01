@@ -1,4 +1,5 @@
 <?php 
+// [0] Theme Supports & additional backend styles //
 function jb_cst_theme_supports() {
   // Admin Styles //
   function jb_cst_admin_style(){
@@ -23,4 +24,38 @@ function jb_cst_theme_supports() {
 	);
 }
 add_action( 'after_setup_theme', 'jb_cst_theme_supports' );
+// Pagination support //
+function jb_cst_pagination_os($pages = '', $range = 2) {  
+	// vars //
+	$showitems = ($range * 2)+1;  
+	global $paged;
+	if(empty($paged)) $paged = 1;
+	// setup query //
+	if($pages == '') {
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+		if(!$pages) {
+			$pages = 1;
+		}
+	}   
+	// Output //
+	if(1 != $pages) {
+		echo "<div class='gbl-site-pagination-cst'>";
+		// display back button //
+		if($paged <= $pages  && $paged != 1) {
+			echo "<a class='arrow-toggle-cst prev-cst' href='".get_pagenum_link($paged - 1)."'>".file_get_contents( get_template_directory_uri() . '/assets/imgs/bootstrap-icons/chevron-left.svg')."</a>";
+		}
+		// display each page link //
+		for ($i=1; $i <= $pages; $i++) {
+			if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
+				echo ($paged == $i)? "<span class='current'>".$i."</span>":"<a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a>";
+			}
+		}
+		// display next button //
+		if($paged < $pages) {
+			echo "<a class='arrow-toggle-cst next-cst' href='".get_pagenum_link($paged + 1)."'>".file_get_contents( get_template_directory_uri() . '/assets/imgs/bootstrap-icons/chevron-right.svg')."</a>";
+		}
+		echo "</div>";	
+	}
+}
 ?>
