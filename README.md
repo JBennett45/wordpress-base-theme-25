@@ -8,16 +8,16 @@ This theme has been built to be a base for any custom project, I've tried to cov
 **Note:** this isn't a block/gutenburg theme, this is using the classic WordPress setup with a style.css not json & blocks/gutenburg.
 
 # Installing Dependencies 
-I run WordPress through MAMP and had difficulties setting up a proxy for webpacks hot reload so I use Laravel Mix with BrowserSync. The only issue I have noticed is a dependency problem with BS on newer version of NPM. Two ways of combat this: 
+I run WordPress through MAMP and had difficulties setting up a proxy for webpacks hot reload so I use Laravel Mix with BrowserSync. The one issue is a dependency problem with BS on newer version of NPM. Two ways of combat this: 
 
 **1.** Delete the browser sync dependencies (both of them) from the package, run npm install then run npm run dev and allow is to legacy install on its own.
 
-**2.** Do the above nit install of running npm run dev before browser sync is install, run: 
+**2.** Do the above install without BS then run: 
 npm install browser-sync browser-sync-webpack-plugin@^2.3.0 --save-dev --legacy-peer-deps
 
 When all depencies are installed and play nice together, you have 'dev' for development and 'build' for production and compression. 
 
-The SRC directory is where uncompressed files are kept and the the assets folder is where they are compressed to on build.
+The SRC directory is where uncompressed files are kept and the the assets folder is where they're compressed to on build.
 
 # Installation
 The only thing I've setup after a standard WordPress install is a front page and blog listing page (and allocated them in the reading settings) & also created a header and footer menu to showcase the dropdown support. At the moment pages simply bring in starter content to allow you to either use WP query or ACF fields.
@@ -25,9 +25,9 @@ The only thing I've setup after a standard WordPress install is a front page and
 In the example, permalinks are set to 'post name'.
 
 # Elements 
-I've built in a couple of reusable elements that normal crop up in the UI of a custom build. Within the SCSS folder, theres an elements folder which controls essential styles for functionality like showing/hiding states but more specific styles can be applied to these in the blocks/templates you create. 
+They're built in elements of standard UX that crop up with custom builds. These can be found in the elements folder in both JS and SCSS. The JS shouldn't need changing unless you want to add features, the SCSS files have comments marked "Styles below" to steer you in the right direction of where to add your custom styling and which lines you should leave alone due to it controlling the output of the element (things like show/hide).
 
-**1 - Tabbed Content .** Simple pill based tabs thats control visibility states of content wrappers via a div attribute called 'data-tabid' simply use the classes supplied in the example (news page) and makes sure the tabid of both click control and content wrapper match.
+**1 - Tabbed Content .** Simple pill based tabs thats control visibility states of content wrappers via a div attribute called 'data-tabid', as long as the tabid of the control and output match, the content will show and hide based on UI. You can see an example on the demo news page where you can switch between paginated and axios news outputs.
 
 # Helper Functions 
 _jbcst_wp_return_wpmenu_ - a WordPress helper function that accepts three arguments, Menu Name, Classname and Chevrons boolean. The menu name should match you WordPress appearence menu name, the other two are optional, the chevron boolean will show for qualifying dropdown items up to three tiers deep as you can see in the demo of the header. CSS for controlling this is managed in a different file to the style files so you don't need to edit the functional CSS unless you need to. 
