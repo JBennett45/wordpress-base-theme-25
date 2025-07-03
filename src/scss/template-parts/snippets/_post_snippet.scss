@@ -1,0 +1,10 @@
+@use "./../../global/colour_scheme" as *;
+.post-snippet-output-cst {
+  border-bottom: 1px solid $mainBG;
+  margin-bottom: 15px;
+  padding:15px 0;
+  a {
+    color: $mainBG;
+    text-transform: uppercase;
+  }
+}
