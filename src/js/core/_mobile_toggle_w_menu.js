@@ -27,7 +27,7 @@ document.querySelectorAll('.mbl-dropdown-watcher-cst .bst-opt-chevron-active-cst
     let closestLiID = closestLi.getAttribute('ID');
     // Only close all instances if a top level item is clicked //
     if(!parentDropdown.classList.contains('sub-menu')) {
-      document.querySelectorAll('.mbl-dropdown-watcher-cst li').forEach((openDropdown) => {
+      document.querySelectorAll('.mbl-dropdown-watcher-cst li').forEach((openDropdown) => {           
         let thisMenuItemID = openDropdown.getAttribute('ID');
         // check if its not the current item (toggle controls that) //
         if(thisMenuItemID != closestLiID) {

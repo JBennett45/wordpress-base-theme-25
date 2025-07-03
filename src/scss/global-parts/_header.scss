@@ -181,7 +181,15 @@
       }
       &.mbl-toggle-activated {
         span {
-          background-color: green;
+          transform: rotate(45deg);
+          margin:0;
+          &:nth-of-type(2) {
+            display: none;
+          }
+          &:nth-of-type(3) {
+            transform: rotate(-45deg);
+            margin-top:-3px;
+          }
         }
       }
       @media only screen and (max-width: 998px) {

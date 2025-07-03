@@ -1,7 +1,10 @@
+@use "./../global/colour_scheme" as *;
+// tabs //
 .tabbed-content-controller-cst {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
   .tabbed-control-input-cst {
     cursor: pointer;
     transition: 0.3s all;
@@ -11,11 +14,12 @@
   .active-tabbed-control-input-cst {
     display: block;
     // Styles below //
-    background-color: #eee;
+    color: $mainBG;
     font-weight: 700;
+    text-decoration: underline;
   }
 }
-
+// content to show //
 .tabbed-content-display-cst {
   .tabbed-control-output-cst {
     display: none;
@@ -25,6 +29,5 @@
     display: block;
     // Styles below //
     padding: 25px 15px;
-    border:1px solid red;
   }
 }

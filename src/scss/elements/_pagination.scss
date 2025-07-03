@@ -1,0 +1,19 @@
+@use "./../global/colour_scheme" as *;
+.gbl-site-pagination-cst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  a, span {
+  padding:0 5px;
+  }
+  .prev-cst, .next-cst {
+    svg {
+      width:12px;
+      height:12px;
+    }
+  }
+  .current-cst {
+    color: $mainBG;
+  }
+}

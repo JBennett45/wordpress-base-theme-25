@@ -1,7 +1,6 @@
 @use "./../global/colour_scheme" as *;
 @use "./../mixins/global" as *;
 @use "./../mixins/font_sizes" as *;
-
 #mbl-menu-ovrr-wrapp {
   position: fixed;
   z-index:50;
@@ -84,24 +83,6 @@
               }
             }
           }
-          // &:hover {
-          //   .sub-menu {
-          //     visibility: visible;
-          //     opacity: 1;
-          //     li {
-          //       .sub-menu {
-          //         visibility: hidden;
-          //         opacity: 0;
-          //       }
-          //       &:hover {
-          //         .sub-menu {
-          //           visibility: visible;
-          //           opacity: 1;
-          //         }
-          //       }
-          //     }
-          //   }
-          // }
           .bst-opt-chevron-active-cst {
             display: flex;
             // arrow desktop colour //
