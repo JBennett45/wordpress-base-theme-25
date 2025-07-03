@@ -10,4 +10,7 @@ require_once( 'inc/disable-gutenburg.php' );
 require_once( 'inc/theme-supports.php' );
 //-- [3] Help Functions --//
 require_once( 'functions/helpers.php' );
+//-- [4] Requests --//
+require_once( 'inc/requests/load-more-posts.php' );
+//-- [5] Misc --//
 ?>

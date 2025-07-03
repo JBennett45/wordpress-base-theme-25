@@ -32,6 +32,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+button {
+	background-color: transparent;
+	border:1px solid #000000;
+	padding: 10px;
+	display: block;
+	border-radius:5px;
+}
 // remove once started a project, this just adds style to the init content block //
 #base-master-default-content-cst {
 	padding:100px 0;

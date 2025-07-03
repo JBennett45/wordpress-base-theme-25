@@ -29,6 +29,8 @@ They're built in elements of standard UX that crop up with custom builds. These 
 
 **1 - Tabbed Content .** Simple pill based tabs thats control visibility states of content wrappers via a div attribute called 'data-tabid', as long as the tabid of the control and output match, the content will show and hide based on UI. You can see an example on the demo news page where you can switch between paginated and axios news outputs.
 
+**1 - Axios powered load more .** Load more posts or post types with an on page request using the load more button and output wrapper.
+
 # Helper Functions 
 _jbcst_wp_return_wpmenu_ - a WordPress helper function that accepts three arguments, Menu Name, Classname and Chevrons boolean. The menu name should match you WordPress appearence menu name, the other two are optional, the chevron boolean will show for qualifying dropdown items up to three tiers deep as you can see in the demo of the header. CSS for controlling this is managed in a different file to the style files so you don't need to edit the functional CSS unless you need to. 
 
