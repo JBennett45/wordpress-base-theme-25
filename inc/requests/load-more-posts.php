@@ -1,14 +1,13 @@
 <?php
-// action name: cst_load_more_posts //
+// Action name: cst_load_more_posts //
 add_action( 'wp_ajax_nopriv_cst_load_more_posts', 'cst_load_more_posts_cb' );
 add_action( 'wp_ajax_cst_load_more_posts', 'cst_load_more_posts_cb' );
 function cst_load_more_posts_cb() {
-	// prepare our arguments for the query
-	$recieve_query = $_POST['query']; // query_posts() takes care of the necessary sanitization
-	// data serialized in the default queries
+	// Setup vars //
+	$recieve_query = $_POST['query'];
 	$decode_seri_postdata = unserialize(base64_decode($recieve_query));
-	$params = $decode_seri_postdata; // query_posts() takes care of the necessary sanitization
-	$params['paged'] = $_POST['currentpage'] + 1; // we need next page to be loaded
+	$params = $decode_seri_postdata; 
+	$params['paged'] = $_POST['currentpage'] + 1;
 	// Setup //
 	$load_more_query = new WP_Query( $params );
   // get posts //
@@ -18,7 +17,7 @@ function cst_load_more_posts_cb() {
 		endwhile;
 	}
 	else {
-		echo '<span class="error-filter-cst">Sorry, nothing found with that criteria.</span>';
+		echo '<span class="error-filter-cst">Sorry, nothing else could be found. (Error #2)</span>';
 	}
   // end //
   die();

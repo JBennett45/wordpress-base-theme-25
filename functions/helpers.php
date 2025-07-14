@@ -24,17 +24,38 @@ function jbcst_wp_return_wpmenu($menuName, $className, $chevron) {
   }
 }
 // [1] ACF - return active field with tag (h tag etc) //
-function jbcst_acf_return_text_field($field, $tag) {
+function jbcst_acf_return_text_field($field, $tag = null) {
   if(class_exists('ACF')) {
     if($field) { 
       if($tag) { 
-          echo '<' . $tag . '>' . $field . '</' . $tag . '>';
-        return;
+        echo '<' . $tag . '>' . $field . '</' . $tag . '>';
       } else {
         echo $field;
-        return;
       }
+      return;
     }
+  } 
+  else {
+    echo 'Error #1: ACF helper function used without plugin instance.';
+  }
+}
+// [1.1] ACF - return active image field wrapped in img & alt - has to be array rerutn //
+function jbcst_acf_return_img_field($img, $class = null) {
+  if(class_exists('ACF')) {
+    // check value //
+    if($img && is_array($img)) { 
+      $returnedSrc = $img['url'];
+      $returnedAlt = $img['alt'];
+    } 
+    else {
+      $returnedSrc = get_template_directory_uri().'/screenshot.png';
+      $returnedAlt = get_bloginfo() . ' - awaiting image'; 
+    }
+    $imgClass = $class ? 'class="' . $class . '"' : null;
+    
+    // send it back //
+    echo '<img src="' . $returnedSrc . '" alt="' . $returnedAlt . '" '. $imgClass .'>';
+    return;
   } 
   else {
     echo 'Error #1: ACF helper function used without plugin instance.';
