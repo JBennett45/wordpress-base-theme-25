@@ -30,7 +30,7 @@ if(loadMoreBtn) {
     // check first load instance //
     checkPostCount();
     // continue with click event and axios send //
-    loadMoreBtn.addEventListener('click', (e) => {
+    loadMoreBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       // functions // 
       let recheckParameters = () => {
@@ -52,22 +52,23 @@ if(loadMoreBtn) {
       loadMoreData.append('currentpage', currentPostsPage);
       loadMoreData.append('maxpage', maxPostsPage);
       loadMoreData.append('ptype', currentPostType);
+      // fetch with vars //
+      let callback = await fetch(theme_ajax.url, {
+        method: "POST",
+        body: loadMoreData
+      });
+      let response = await callback.json();
 
-      // axios call //
-      axios.post(theme_ajax.url, loadMoreData)
-      .then((res) => {
-        // place new posts //
-        axiosParamResWrapp.innerHTML += res.data; 
-        // enable button //
-        loadMoreBtn.disabled = false;
-        loadMoreBtn.innerHTML = '<span>Load more</span>';
-        // increase both instances of current page //
-        currentPostsPage++;
-        axiosParamResWrapp.setAttribute('data-paged',currentPostsPage);
-        // check pagination | hide button if not needed //
-        checkPostCount();
-   
-      }); // end axios //
+      // place new posts //
+      axiosParamResWrapp.innerHTML += response.output; 
+      // enable button //
+      loadMoreBtn.disabled = false;
+      loadMoreBtn.innerHTML = '<span>Load more</span>';
+      // increase both instances of current page //
+      currentPostsPage++;
+      axiosParamResWrapp.setAttribute('data-paged',currentPostsPage);
+      // check pagination | hide button if not needed //
+      checkPostCount();
     }); // end load click //
   } // parameter check (without can't send anything) //
 } // end button on page check //

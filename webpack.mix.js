@@ -1,6 +1,5 @@
 let mix = require('laravel-mix');
 // your Wordpress theme name here
-var themename = "base-theme";
 const hostName = "http://wpbasetheme.local"; // using mamp in my instance. //
 const themePath = '.';
 const resources = themePath + '/src';
