@@ -12,16 +12,15 @@ function cst_load_more_posts_cb() {
 	$load_more_query = new WP_Query( $params );
 
 	ob_start();
-  // get posts //
+  // Get posts content if found or pass message //
 	if ( $load_more_query->have_posts() ) {
 		while ( $load_more_query->have_posts() ) : $load_more_query->the_post();
 			 get_template_part('template-parts/snippets/post-snippet'); 
 		endwhile;
-		// pass the posts to variable //
 		$content = ob_get_contents();
 	}
 	else {
-		$content = '<span class="error-filter-cst">Sorry, nothing else could be found. (Error #2)</span>';
+		$content = '<span class="error-filter-cst">Sorry, no more posts found.</span>';
 	}
 	// clear the buffer //
 	ob_end_clean();

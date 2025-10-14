@@ -58,7 +58,6 @@ if(loadMoreBtn) {
         body: loadMoreData
       });
       let response = await callback.json();
-
       // place new posts //
       axiosParamResWrapp.innerHTML += response.output; 
       // enable button //
@@ -69,6 +68,6 @@ if(loadMoreBtn) {
       axiosParamResWrapp.setAttribute('data-paged',currentPostsPage);
       // check pagination | hide button if not needed //
       checkPostCount();
-    }); // end load click //
-  } // parameter check (without can't send anything) //
-} // end button on page check //
+    }); 
+  } 
+}

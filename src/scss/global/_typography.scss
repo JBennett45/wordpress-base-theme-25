@@ -1,6 +1,35 @@
-// using import for now, replace with custom font or the import for your project //
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-$font-declaration: "Roboto", sans-serif;
+// Use import 
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+// Or locally pull in, vars added for ease
+$theme: 'base-theme';
+$font-pathway: '/wp-content/themes/'+$theme+'/assets/fonts/montserrat/';
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: light;
+  font-weight: 300;
+  src: url($font-pathway + 'montserrat-light.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url($font-pathway + 'montserrat-light.ttf' ) format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-pathway + 'montserrat-regular.woff2') format('woff2'), 
+       url($font-pathway + 'montserrat-regular.ttf' ) format('truetype');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: bold;
+  font-weight: 700;
+  src: url($font-pathway + 'montserrat-bold.woff2') format('woff2'), 
+       url($font-pathway + 'montserrat-bold.ttf' ) format('truetype'); 
+}
+// Declare font after install 
+$font-declaration: "Montserrat", Helvetica, Arial, sans-serif;
+
 body {
   font-family: $font-declaration;
   font-optical-sizing: auto;
@@ -9,7 +38,7 @@ body {
   font-variation-settings: "wdth" 100;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-weight:700;
+  font-weight: 700;
   margin: 15px 0;
 }
 h1 {

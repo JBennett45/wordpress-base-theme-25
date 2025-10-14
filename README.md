@@ -40,5 +40,3 @@ _jbcst_acf_return_text_field_ - an ACF helper function that accepts two argument
 I've numbered each error to help you narrow down an issue should one arrise, because this is a starter theme, really the only issues will be down to plugin clashes or a dependency not being active. As mentioned above I recommend developing with debug on to catch any core errors. 
 
 **Error #1** An ACF helper has been used without the plugin being installed or active, either remove the helper function or install/activate ACF.
-
-**Error #2** This is a problem with the axios requests, for some reason its not returning posts when the query told it there were posts to be found.
