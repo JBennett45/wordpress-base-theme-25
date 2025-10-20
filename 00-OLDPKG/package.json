@@ -1,0 +1,17 @@
+{
+  "name": "base-theme",
+  "version": "1.0.0",
+  "description": "Starter WordPress classic theme based on ACF but supports without, built in support for on page loading & webpack setup for browser sync and SASS.",
+  "scripts": {
+    "dev": "npx mix watch",
+    "build": "mix --production"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.88.0",
+    "sass-loader": "^12.6.0"
+  }
+}
