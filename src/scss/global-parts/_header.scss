@@ -1,6 +1,6 @@
 @use "./../global/colour_scheme" as *;
 @use "./../mixins/font_sizes" as *;
-#base-master-hdr-cst {
+.basetheme-header-cst {
   background-color: $mainBG;
   position: fixed;
   width:100%;

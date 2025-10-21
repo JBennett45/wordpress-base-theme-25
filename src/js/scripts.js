@@ -1,3 +1,5 @@
+// styles //
+import '../scss/styles.scss'
 // functional/core //
 import "./core/_mobile_toggle_w_menu";
 // elements //

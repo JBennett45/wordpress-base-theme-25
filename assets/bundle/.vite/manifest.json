@@ -1,0 +1,11 @@
+{
+  "src/js/scripts.js": {
+    "file": "scripts-FdT8d3Tq.js",
+    "name": "scripts",
+    "src": "src/js/scripts.js",
+    "isEntry": true,
+    "css": [
+      "scripts-Cmdoymk8.css"
+    ]
+  }
+}

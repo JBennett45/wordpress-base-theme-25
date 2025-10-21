@@ -1,17 +1,22 @@
 {
   "name": "base-theme",
   "version": "1.0.0",
-  "description": "Starter WordPress classic theme based on ACF but supports without, built in support for on page filtering via axios.js support &amp; webpack setup for browser sync and SASS.",
-  "scripts": {
-    "dev": "npx mix watch",
-    "build": "mix --production"
-  },
+  "description": "Starter WordPress classic theme based with support for ACF classes & vite preprocessing.",
+  "main": "vite.config.js",
   "devDependencies": {
-    "browser-sync": "^3.0.4",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "laravel-mix": "^6.0.49",
-    "resolve-url-loader": "^5.0.0",
-    "sass": "^1.88.0",
-    "sass-loader": "^12.6.0"
-  }
+    "sass": "^1.80.3",
+    "vite": "^7.1.11"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JBennett45/wordpress-base-theme-25/issues"
+  },
+  "homepage": "https://github.com/JBennett45/wordpress-base-theme-25#readme"
 }

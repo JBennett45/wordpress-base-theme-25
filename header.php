@@ -14,7 +14,7 @@
 wp_body_open(); 
 get_template_part( 'template-parts/overlays/mobile-menu' ); 
 ?>
-<header id="base-master-hdr-cst" class="cst-desktop-menu-glb-spt">
+<header id="global-theme-hdr-cst" class="basetheme-header-cst">
   <div class="container-cst">
     <div class="logo-wrapp-cst">
       <a href="<?php echo get_home_url(); ?>">

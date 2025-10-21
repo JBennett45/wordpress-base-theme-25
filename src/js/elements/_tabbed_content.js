@@ -29,7 +29,5 @@ document.querySelectorAll('.jb-tabbed-content-wrapp-cst .tabbed-control-input-cs
         }
       });
     }
-   
-    
   });
 });

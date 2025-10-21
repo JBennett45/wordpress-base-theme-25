@@ -10,15 +10,25 @@ function cst_load_more_posts_cb() {
 	$params['paged'] = $_POST['currentpage'] + 1;
 	// Setup //
 	$load_more_query = new WP_Query( $params );
-  // get posts //
+
+	ob_start();
+  // Get posts content if found or pass message //
 	if ( $load_more_query->have_posts() ) {
 		while ( $load_more_query->have_posts() ) : $load_more_query->the_post();
-			echo get_template_part('template-parts/snippets/post-snippet'); 
+			 get_template_part('template-parts/snippets/post-snippet'); 
 		endwhile;
+		$content = ob_get_contents();
 	}
 	else {
-		echo '<span class="error-filter-cst">Sorry, nothing else could be found. (Error #2)</span>';
+		$content = '<span class="error-filter-cst">Sorry, no more posts found.</span>';
 	}
+	// clear the buffer //
+	ob_end_clean();
+	// send it //
+ 	echo json_encode( array(
+		'success' => 1,
+		'output' => $content
+	));
   // end //
   die();
 }
