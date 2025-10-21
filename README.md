@@ -1,7 +1,7 @@
 # WordPress Base Theme 2025 (Classic Theme) 
-Starter WordPress classic theme based on ACF but supports without, built in support for on page filtering via axios.js support &amp; webpack setup for browser sync and SASS. 
+Starter WordPress classic theme based with support for ACF classes & vite preprocessing.
 
-This theme has been built to be a base for any custom project, I've tried to cover all essential theme elements ready for anyone to elaborate and build on for their own projects. I've created a lot of support for ACF but its all conditional so if you aren't using ACF, the theme will still run without issue.
+This theme has been built to be a base for any blank slate build, its minimal and has basic style to get started but not too much so its easy to get started quickly. 
 
 **Demo:** You can access a demo of begin state of the theme [here](http://basetheme.jbdev.co.uk). _wp-admin is password protected but only for this demo, this won't be the case on your install unless you add it to .htaccess_
 

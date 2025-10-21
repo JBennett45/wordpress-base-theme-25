@@ -1,7 +1,7 @@
 {
   "name": "base-theme",
   "version": "1.0.0",
-  "description": "Starter WordPress classic theme based on ACF but supports without, built in support for on page filtering via axios.js support &amp; webpack setup for browser sync and SASS.",
+  "description": "Starter WordPress classic theme based with support for ACF classes & vite preprocessing.",
   "main": "vite.config.js",
   "devDependencies": {
     "vite": "^5.4.9",
