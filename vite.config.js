@@ -5,6 +5,7 @@ import { resolve } from 'path';
 const JS_FILE = resolve('src/js/scripts.js')
 // Destination //
 const BUILD_DIR = resolve(__dirname, 'assets/bundle');
+const ASSET_DIR = resolve(__dirname, 'assets/');
 // Vite config //
 export default defineConfig({
   build: {

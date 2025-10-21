@@ -316,21 +316,21 @@ template {
   font-family: "Montserrat";
   font-style: light;
   font-weight: 300;
-  src: url("/wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-light.woff2") format("woff2"), url("/wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-light.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("~./wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-light.woff2") format("woff2"), url("~./wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-light.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 @font-face {
   font-display: swap;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("/wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-regular.woff2") format("woff2"), url("/wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-regular.ttf") format("truetype");
+  src: url("~./wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-regular.woff2") format("woff2"), url("~./wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-regular.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
   font-family: "Montserrat";
   font-style: bold;
   font-weight: 700;
-  src: url("/wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-bold.woff2") format("woff2"), url("/wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-bold.ttf") format("truetype");
+  src: url("~./wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-bold.woff2") format("woff2"), url("~./wp-content/themes/base-theme/assets/fonts/montserrat/montserrat-bold.ttf") format("truetype");
 }
 body {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -958,4 +958,8 @@ a img.aligncenter {
 }
 .gbl-site-pagination-cst .current-cst {
   color: #006270;
+}
+
+body {
+  border: 5px solid green;
 }

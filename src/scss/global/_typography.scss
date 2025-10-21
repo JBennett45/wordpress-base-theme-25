@@ -2,7 +2,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 // Or locally pull in, vars added for ease
 $theme: 'base-theme';
-$font-pathway: '/wp-content/themes/'+$theme+'/assets/fonts/montserrat/';
+$font-pathway: '../fonts/montserrat/';
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
