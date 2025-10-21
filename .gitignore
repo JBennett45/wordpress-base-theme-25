@@ -6,4 +6,6 @@ node_modules/*
 
 package-lock.json
 
+prepros.config
+prepros*
 # again remember to ignore htaccess, config, secure uploads etc if you are making a repo from root, this is just a theme repository.
