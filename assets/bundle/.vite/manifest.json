@@ -1,0 +1,11 @@
+{
+  "src/js/scripts.js": {
+    "file": "scripts-gakurfYd.js",
+    "name": "scripts",
+    "src": "src/js/scripts.js",
+    "isEntry": true,
+    "css": [
+      "scripts-BaWnQbzU.css"
+    ]
+  }
+}

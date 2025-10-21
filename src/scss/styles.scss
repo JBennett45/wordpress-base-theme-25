@@ -15,3 +15,7 @@
 // [3] Elements (styles applied from your component, these files just control the neccessary hide/show etc) //
 @use "elements/tabbed_content";
 @use "elements/pagination";
+
+body {
+  border: 20px solid green;
+}
