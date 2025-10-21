@@ -4,10 +4,10 @@
   "description": "Starter WordPress classic theme based with support for ACF classes & vite preprocessing.",
   "main": "vite.config.js",
   "devDependencies": {
-    "vite": "^5.4.9",
-    "sass": "^1.80.3"
+    "sass": "^1.80.3",
+    "vite": "^7.1.11"
   },
- "scripts": {
+  "scripts": {
     "dev": "vite build --watch",
     "build": "vite build"
   },
