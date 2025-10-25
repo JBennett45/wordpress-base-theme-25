@@ -48,5 +48,8 @@ button {
 	align-items: center;
 	.container-cst {
 		max-width: 950px;
+		.error-txt-wrap {
+			color: red;
+		}
 	}
 }

@@ -14,6 +14,8 @@ $fileName = basename($template);
           echo '<h5>Post example content fetch:</h5>';
           echo get_the_content();
         endwhile; 
+      } elseif(is_404()) {
+        echo '<h5 class="error-txt-wrap">404 error found</h5>';
       }
     ?>
   </div>
