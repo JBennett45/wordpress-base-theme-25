@@ -15,13 +15,13 @@ wp_body_open();
 get_template_part( 'template-parts/overlays/mobile-menu' ); 
 ?>
 <header id="global-theme-hdr-cst" class="basetheme-header-cst">
-  <div class="container-cst">
-    <div class="logo-wrapp-cst">
+  <div class="container-cst hdr-container-cst">
+    <div class="hdr-container-cst__logo--wrap">
       <a href="<?php echo get_home_url(); ?>">
         <span>Logo</span>
       </a>
     </div>
-    <div class="menu-wrapp-cst">
+    <div class="hdr-container-cst__menu--wrap">
       <?php jbcst_wp_return_wpmenu('Header Menu', 'hdr-optional-class', true); ?>
     </div>
     <div class="mbl-toggle-wrapp">

@@ -1,17 +1,17 @@
-@use "./../global/colour_scheme" as *;
-@use "./../mixins/font_sizes" as *;
+@use "./../../global/colour_scheme" as *;
+@use "./../../mixins/font_sizes" as *;
 .basetheme-header-cst {
   background-color: $mainBG;
   position: fixed;
   width:100%;
   top:0;
-  .container-cst {
+  .hdr-container-cst {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height:75px;
     color: $white;
-    .logo-wrapp-cst {
+    &__logo--wrap {
       padding:15px;
       span {
         font-size:2em;
@@ -19,7 +19,7 @@
         text-transform: uppercase;
       }
     }
-    .menu-wrapp-cst {
+    &__menu--wrap {
       height:100%;
       nav {
         height:100%;

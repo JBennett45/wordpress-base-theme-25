@@ -1,13 +1,13 @@
-@use "./../global/colour_scheme" as *;
-#base-master-fttr-cst {
-  border-top: 2px solid $mainBG;
+@use "./../../global/colour_scheme" as *;
+.basetheme-footer-cst {
+  border-top: 5px solid $mainBG;
   margin-top: 25px;
   padding:25px 0;
-  .container-cst {
+  .ftr-container-cst {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .footer-menu-cst {
+    &__menu--wrap {
       ul {
         list-style-type: none;
         text-transform: uppercase;
@@ -32,9 +32,10 @@
         }
       }
     }
-    .date-wrapp-cst {
+    &__date--wrap {
       span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        font-weight: 700;
       }
     }
   }

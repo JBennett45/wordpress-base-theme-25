@@ -1,6 +1,6 @@
-@use "./../global/colour_scheme" as *;
-@use "./../mixins/global" as *;
-@use "./../mixins/font_sizes" as *;
+@use "./../../global/colour_scheme" as *;
+@use "./../../mixins/global" as *;
+@use "./../../mixins/font_sizes" as *;
 #mbl-menu-ovrr-wrapp {
   position: fixed;
   z-index:50;

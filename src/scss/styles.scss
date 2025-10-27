@@ -4,9 +4,9 @@
 @use "global/wp_image_alignment";
 
 // [1] Global Parts //
-@use "global-parts/header";
-@use "global-parts/mobile_menu";
-@use "global-parts/footer";
+@use "global-parts/header/header_main";
+@use "global-parts/header/header_mobile_menu";
+@use "global-parts/footer/footer_main";
 
 // [2] Template Parts //
 @use "template-parts/posts_wrapper";
