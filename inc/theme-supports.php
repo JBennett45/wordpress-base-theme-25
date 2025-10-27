@@ -22,6 +22,8 @@ function jb_cst_theme_supports() {
 			'footer-links' => __( 'Footer Links', 'base-theme' )
 		)
 	);
+	// Dev Mode //
+	require_once( 'admin/development-mode.php' );
 }
 add_action( 'after_setup_theme', 'jb_cst_theme_supports' );
 // Pagination support //

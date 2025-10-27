@@ -40,3 +40,6 @@ _jbcst_acf_return_text_field_ - an ACF helper function that accepts two argument
 I've numbered each error to help you narrow down an issue should one arrise, because this is a starter theme, really the only issues will be down to plugin clashes or a dependency not being active. As mentioned above I recommend developing with debug on to catch any core errors. 
 
 **Error #1** An ACF helper has been used without the plugin being installed or active, either remove the helper function or install/activate ACF.
+
+# Development Mode
+To support larger local database changes or bigger additions I've created a development mode. This collection of functions adds a development mode WP menu item where you can set a master user and the build phases. If development is selected in the build phase, only the master username populated above will be able to sign in. Any other users will be signed out and shown a development message if they try and log in again. Really useful when you want a live copy of the database but don't want a client making changes in the duration of a patch or addition/you're making database changes that would clash with live. 
