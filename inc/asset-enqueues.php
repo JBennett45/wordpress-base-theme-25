@@ -18,7 +18,6 @@ function jb_cst_theme_styles_and_scripts() {
     if (file_exists($manifestPath)) {
 			$manifest = json_decode(file_get_contents($manifestPath), true);
 			if (isset($manifest['src/js/scripts.js'])) {
-		
 				// CSS //
 				wp_register_style(
 					'cst-theme-css',
@@ -32,16 +31,22 @@ function jb_cst_theme_styles_and_scripts() {
 					'',
 					array('in_footer' => true)
 				);
-
 				// send it //
 				wp_enqueue_style( 'cst-theme-css' );
 				wp_enqueue_script( 'cst-theme-js' );
-
-
 			}
 		}
   }
 }
 // enqueue base scripts and styles
 add_action( 'wp_enqueue_scripts', 'jb_cst_theme_styles_and_scripts', 999 );
+// Login Screen //
+function jb_cst_theme_login_style() {
+	wp_register_style(
+		'cst-login-css',
+		get_stylesheet_directory_uri() . '/assets/css/login.min.css', 
+	);
+	wp_enqueue_style( 'cst-login-css' );	
+}
+add_action( 'login_enqueue_scripts', 'jb_cst_theme_login_style' );
 ?>
