@@ -49,4 +49,11 @@ function jb_cst_theme_login_style() {
 	wp_enqueue_style( 'cst-login-css' );	
 }
 add_action( 'login_enqueue_scripts', 'jb_cst_theme_login_style' );
+// preload fonts //
+function jb_cst_font_preload() {
+	echo '<link rel="preload" href="' . get_theme_file_uri() . '/assets/fonts/montserrat/montserrat-light.ttf' . '" as="font" type="font/woff" crossorigin>'; 
+	echo '<link rel="preload" href="' . get_theme_file_uri() . '/assets/fonts/montserrat/montserrat-regular.ttf' . '" as="font" type="font/woff" crossorigin>'; 
+	echo '<link rel="preload" href="' . get_theme_file_uri() . '/assets/fonts/montserrat/montserrat-bold.ttf' . '" as="font" type="font/woff" crossorigin>'; 
+};
+add_action( 'wp_head', 'jb_cst_font_preload' );
 ?>
