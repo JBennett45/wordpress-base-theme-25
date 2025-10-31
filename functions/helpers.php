@@ -61,4 +61,11 @@ function jbcst_acf_return_img_field($img, $class = null) {
     echo 'Error #1: ACF helper function used without plugin instance.';
   }
 }
+// Return theme options instead of needing to do it each call //
+function jbcst_acf_return_option_field($fieldname) {
+  if(class_exists('ACF')) {
+    $fieldname = get_field($fieldname, 'options');
+    return $fieldname;
+  }
+}
 ?>

@@ -13,4 +13,5 @@ require_once( 'functions/helpers.php' );
 //-- [4] Requests --//
 require_once( 'inc/requests/load-more-posts.php' );
 //-- [5] Misc --//
+// require_once( 'inc/misc/acf-theme-options.php' ); // - add if required with ACF
 ?>
