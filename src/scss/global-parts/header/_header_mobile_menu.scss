@@ -1,10 +1,9 @@
 @use "./../../global/colour_scheme" as *;
 @use "./../../mixins/global" as *;
-@use "./../../mixins/font_sizes" as *;
 #mbl-menu-ovrr-wrapp {
   position: fixed;
   z-index:50;
-  background-color: $mainBG;;
+  background-color: $default;
   top: 75px; // or change to your header height //
   left: 0;
   width: 100%;
@@ -21,7 +20,6 @@
       ul {
         list-style-type: none;
         li {
-          @include cstFont18();
           a {
             color: inherit;
             display: flex;
@@ -34,7 +32,7 @@
             text-decoration: none;
             font-weight: 700;
             color: $white;
-            @include cstFont18();
+             @include responsiveFontSize();
           }
           // dropdown //
           .sub-menu {

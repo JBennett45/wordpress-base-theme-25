@@ -1,6 +1,6 @@
 @use "./../../global/colour_scheme" as *;
 .basetheme-footer-cst {
-  border-top: 5px solid $mainBG;
+  border-top: 5px solid $default;
   margin-top: 25px;
   padding:25px 0;
   .ftr-container-cst {

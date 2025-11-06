@@ -1,7 +1,7 @@
 @use "./../../global/colour_scheme" as *;
-@use "./../../mixins/font_sizes" as *;
+@use "./../../mixins/global" as *;
 .basetheme-header-cst {
-  background-color: $mainBG;
+  background-color: $default;
   position: fixed;
   width:100%;
   top:0;
@@ -41,7 +41,7 @@
               text-decoration: none;
               font-weight: 700;
               color: $white;
-              @include cstFont18();
+              @include responsiveFontSize();
             }
             // Dropdown hover control //
             .sub-menu {
@@ -57,12 +57,12 @@
               transition: 0.25s all;
               // add dropdwon styles here //
               background-color: $white;
-              border: 1px solid $mainBG;
+              border: 1px solid $default;
               border-top:0;
               border-bottom:0;
               li {
                 display: block;
-                border-bottom:1px solid $mainBG;
+                border-bottom:1px solid $default;
                 a {
                   justify-content: flex-start;
                   // styling //
@@ -74,9 +74,9 @@
                   top:-1px;
                   transition: 0.25s all;
                   li {
-                    border-top:1px solid $mainBG;
+                    border-top:1px solid $default;
                     a {
-                      color: $mainBG;
+                      color: $default;
                       .sub-menu {
                         // prevent further, only support three tier //
                         display: none; 
