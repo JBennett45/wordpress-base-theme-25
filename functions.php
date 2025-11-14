@@ -8,6 +8,7 @@ require_once( 'inc/asset-enqueues.php' );
 require_once( 'inc/disable-gutenburg.php' );
 //-- [2] Theme Supports --//
 require_once( 'inc/theme-supports.php' );
+// require_once( 'inc/admin/post-types/example-cst.php' );
 //-- [3] Help Functions --//
 require_once( 'functions/helpers.php' );
 //-- [4] Requests --//
