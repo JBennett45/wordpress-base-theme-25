@@ -9,9 +9,10 @@
 @use "global-parts/header/header_main";
 @use "global-parts/header/header_mobile_menu";
 @use "global-parts/footer/footer_main";
+@use "global-parts/wrappers/columned_wraps";
 // [2] Template Parts //
-@use "template-parts/posts_wrapper";
-@use "template-parts/snippets/post_snippet";
-// [3] Elements (styles applied from your component, these files just control the neccessary hide/show etc) //
+@use "template-parts/pages/news";
+@use "template-parts/cards/news_card";
+// [3] Elements //
 @use "elements/tabbed_content";
 @use "elements/pagination";

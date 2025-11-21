@@ -15,7 +15,7 @@ function cst_load_more_posts_cb() {
   // Get posts content if found or pass message //
 	if ( $load_more_query->have_posts() ) {
 		while ( $load_more_query->have_posts() ) : $load_more_query->the_post();
-			 get_template_part('template-parts/snippets/post-snippet'); 
+			 echo get_template_part('template-parts/cards/news');
 		endwhile;
 		$content = ob_get_contents();
 	}
