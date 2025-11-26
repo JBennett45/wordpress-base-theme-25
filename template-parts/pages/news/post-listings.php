@@ -45,7 +45,6 @@ $args = array(
       while ( $wp_query->have_posts() ) : $wp_query->the_post();
         echo get_template_part('template-parts/cards/news'); 
       endwhile;
-      wp_reset_postdata();
     ?>
   </div>
   <div class="container-cst news-listings-cst__load-more">
@@ -62,3 +61,4 @@ $args = array(
   data-maxpages="<?php echo $wp_query->max_num_pages ?>"
   data-posttype="<?php echo $wp_query->query_vars['post_type'] ?>"
 ></div>
+<?php wp_reset_query(); ?>

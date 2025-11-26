@@ -36,6 +36,7 @@ function jb_cst_theme_styles_and_scripts() {
 				wp_enqueue_script( 'cst-theme-js' );
 			}
 		}
+		wp_enqueue_style('dashicons');
   }
 }
 // enqueue base scripts and styles

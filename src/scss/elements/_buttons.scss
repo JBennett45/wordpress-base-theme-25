@@ -23,11 +23,8 @@
       &:after {
         content: '>';
         position: absolute;
-        right:-12px;
-        transition: all 0.3s;
-        @media only screen and (max-width: 520px) {
-          right:-10px;
-        }
+        right:-15px;
+        transition: all 0.5s;
       }
     }
     &:hover {
@@ -39,39 +36,20 @@
     }
   }
   // Orange Colour Modifier //
-  &--orange {
-    background-color: $default;
+  &--black {
+    background-color: $black;
     span {
-      color: $black;
+      color: $white;
     }
     &:hover {
+      background-color: $white;
+      span {
+        color: $black;
+      }
     }
   }
   @media only screen and (max-width: 520px) {
     padding: 0 25px;
     height: 40px;
-  }
-}
-// Header Shopping Icon //
-.basket-button-cst {
-  width:60px;
-  height: 60px;
-  background-color: $charcoal;
-  border:0;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  svg {
-    transition: all 0.125s;
-  }
-  &--wider-btn {
-    width: 75px;
-  }
-  &:hover {
-    svg {
-      transform: scale(1.075);
-    }
   }
 }

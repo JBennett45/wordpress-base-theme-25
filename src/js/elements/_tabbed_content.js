@@ -1,33 +1,21 @@
-// Tab Controller, show and hide relevant content via data-tabid, apply SCSS to the elements directly, basic styles applied to control active and none active states //
-document.querySelectorAll('.jb-tabbed-content-wrapp-cst .tabbed-control-input-cst').forEach((tabcontrol) => {
-  tabcontrol.addEventListener('click', (e) => {
-    // vars // 
-    let activeTabID = tabcontrol.getAttribute('data-tabid').toLowerCase(); 
-    let refreshLocation = null;
-    if(tabcontrol.getAttribute('data-url-refresh')) {
-      refreshLocation = tabcontrol.getAttribute('data-url-refresh'); 
-    } 
-    // Allow choice to page refresh/reset tab toggle //
-    if(refreshLocation) {
-      window.location.href = refreshLocation;
-    } else {
-      // Reset active states from tabs and content wrappers //
-      document.querySelectorAll('.jb-tabbed-content-wrapp-cst .tabbed-control-input-cst').forEach((allTabs) => {
-        allTabs.classList.remove('active-tabbed-control-input-cst');
+const tabs_wrap = document.querySelector('.jb-custom-tabs-cst');
+if(tabs_wrap) {
+  document.querySelectorAll('.jb-custom-tabs-title-cst__item').forEach((tab) => {
+    tab.addEventListener('click', (e) => {
+      let target_number = tab.getAttribute('data-target');
+      // Resets //
+      document.querySelectorAll('.jb-custom-tabs-title-cst__item').forEach((allinstances) => {
+        allinstances.classList.remove('jb-custom-tabs-title-cst__item--active');
       });
-      // Active state on clicked item //
-      tabcontrol.classList.add('active-tabbed-control-input-cst');
-      // Content Conrol //
-      document.querySelectorAll('.jb-tabbed-content-wrapp-cst .tabbed-control-output-cst').forEach((allContent) => {
-        // vars // 
-        let targetContent = allContent.getAttribute('data-tabid').toLowerCase(); 
-        // remove all current instances //
-        allContent.classList.remove('active-tabbed-control-output-cst');
-        // add to relevant wrapper //
-        if(activeTabID === targetContent) {
-          allContent.classList.add('active-tabbed-control-output-cst');
+      tab.classList.add('jb-custom-tabs-title-cst__item--active');
+      document.querySelectorAll('.jb-custom-tabs-content-cst__item').forEach((allinstances) => {
+        let content_target = allinstances.getAttribute('data-target');
+        if(content_target == target_number) {
+          allinstances.classList.add('jb-custom-tabs-content-cst__item--active');
+        } else {
+          allinstances.classList.remove('jb-custom-tabs-content-cst__item--active');
         }
       });
-    }
+    })
   });
-});
+}

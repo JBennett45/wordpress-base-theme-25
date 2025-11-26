@@ -32,6 +32,8 @@ $font-declaration: "Montserrat", Helvetica, Arial, sans-serif;
 
 body {
   font-family: $font-declaration;
+  font-size:16px;
+  line-height:24px;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -69,7 +71,34 @@ p {
 }
 p {
   font-size:1rem;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 strong {
   font-weight: 700;
+}
+#main-cst-theme-wrapp-cst {
+	overflow-x: hidden;
+	position: relative;
+  ul {
+    padding: 15px 0;
+    margin-left: 15px;
+    li {
+      list-style-type: none;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 15px;
+      &:before {
+        content: '>';
+        position: absolute;
+        top:0;left:0;
+        font-size:16px;
+      }
+      &:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
 }
