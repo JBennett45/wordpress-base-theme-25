@@ -15,5 +15,5 @@ require_once( 'functions/helpers.php' );
 require_once( 'inc/requests/load-more-posts.php' );
 require_once( 'inc/requests/filter-posts.php' );
 //-- [5] Misc --//
-// require_once( 'inc/misc/acf-theme-options.php' ); // - add if required with ACF
+require_once( 'inc/misc/cf7-hooks.php' ); // - add if required with ACF
 ?>

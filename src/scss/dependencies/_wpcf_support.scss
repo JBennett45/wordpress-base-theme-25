@@ -1,3 +1,4 @@
+@use "./../global/colour_scheme" as *;
 .wpcf-master-wrapp-cst {
   input[type="text"],
   input[type="email"],
@@ -26,7 +27,7 @@
 // Custom accceptance //
 .acceptance-checkbox-cst {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   margin:15px 0;
@@ -35,14 +36,16 @@
     height:28px;
     border-radius: 50%;
     background-color: #FFFFFF;
+    border:1px solid $black;
     position: relative;
+    margin-right: 10px;
     &:before {
       content: '';
       position: absolute;
       display: none;
       top:4px;left:4px;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       background-color: green;
       border-radius: 50%;
     }
@@ -53,14 +56,16 @@
     }
   }
   &__message {
-    max-width: calc(100% - 50px);
+    max-width: calc(100% - 28px);
     p {
       font-size: 16px;
       line-height: 18px;
     }
   }
   &--error {
-    border: 2px solid red;
+     p {
+      border-bottom: 1px solid red;;
+    }
   }
   .wpcf7-form-control-wrap {
     display: none;
