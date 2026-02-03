@@ -27,7 +27,8 @@ function cst_load_more_posts_cb() {
 	// send it //
  	echo json_encode( array(
 		'success' => 1,
-		'output' => $content
+		'output' => $content,
+		'paged' => $params['paged']
 	));
   // end //
   die();

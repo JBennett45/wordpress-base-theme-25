@@ -16,16 +16,16 @@ body {
 .global-block-body-scroll-cst {
 	overflow: hidden;
 }
-#main-cst-theme-wrapp-cst {
+#main-cst-theme-wrap-cst {
 	overflow-x: hidden;
 }
 .container-cst {
-	max-width: 1220px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
-  @media only screen and (max-width: 1215px) {
-		padding-left:20px;
-		padding-right: 20px;
+	padding: 0 25px;
+  @media only screen and (min-width: 1225px) {
+		padding:0;
   }
 }
 img {
@@ -34,25 +34,4 @@ img {
 a {
 	color: inherit;
 	text-decoration: none;
-}
-button {
-	background-color: transparent;
-	border:1px solid #000000;
-	padding: 10px;
-	display: block;
-	border-radius:5px;
-}
-// remove once started a project, this just adds style to the init content block //
-#base-master-default-content-cst {
-	padding:100px 0;
-	text-align: center;
-	min-height: calc(100vh - 80px);
-	display: flex;
-	align-items: center;
-	.container-cst {
-		max-width: 950px;
-		.error-txt-wrap {
-			color: red;
-		}
-	}
 }

@@ -7,7 +7,7 @@ function cst_filter_posts_cb() {
   $taxonomy = $_POST['taxonomy'];
   $type = $_POST['ptype'];
 	$term_value = $_POST['term'];
-  $limit = 2;
+  $limit = $_POST['limit'];
   $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
   $args = array(
     'post_type' => $type,
@@ -43,7 +43,7 @@ function cst_filter_posts_cb() {
 	// Send it //
  	echo json_encode( array(
 		'success' => 1,
-		'filter_output' => $filter_output,
+		'output' => $filter_output,
     'new_query' => base64_encode(serialize($wp_filter_query->query_vars)),
 		'new_current_page' => $wp_filter_query->query_vars['paged'],
 		'new_max_page' => $wp_filter_query->max_num_pages,

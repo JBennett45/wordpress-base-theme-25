@@ -1,84 +1,33 @@
 @use "./../../mixins/global" as *;
-.archive-three-listing-cst {
+.archive-post-listing-cst {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 35px;
+  grid-gap: 12.5px 25px;
   position: relative;
   z-index: 5;
-  .archivable-card-cst {
-    position: relative;
-    transition: 0.5s all;
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top:0;left:0;
-      width:100%;
-      height:100%;
-      opacity: 0;
-      transition: 0.5s all;
+  &__col-3 {
+    grid-template-columns: repeat(1, 1fr);
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
     }
-    &--loading {
-      &:before {
-        opacity: 1;
-        z-index: 10;
-      }
-    }
-    @media only screen and (max-width: 768px) {
-      width:375px;
-      margin: 0 auto;
-    }
-    @media only screen and (max-width: 520px) {
-      width:320px;
-    }
-  }
-  &__scroll_all_devices {
-    display: flex;
-    overflow-y: scroll;
-    @include removeScrollBars();
-    grid-gap: 50px;
-    padding-bottom: 25px; // shadow /
-    .archivable-card-cst {
-      width:475px;
-      flex: 0 0 auto;
-      @media only screen and (max-width: 998px) {
-        width:375px;
-      }
-      @media only screen and (max-width: 520px) {
-        width:320px;
-      }
-    }
-    @media only screen and (max-width: 998px) {
-      grid-gap: 35px;
-    }
-    @media only screen and (max-width: 520px) {
-      grid-gap: 25px;
+    @media only screen and (min-width: 998px) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   &__scroll_mobile {
+    display: flex;
+    overflow-y: scroll;
+    @include removeScrollBars();
     .archivable-card-cst {
-      @media only screen and (max-width: 998px) {
-        width:375px;
-        flex: 0 0 auto;
-      }
-      @media only screen and (max-width: 520px) {
-        width:320px;
+      width:320px;
+      flex: 0 0 auto;
+      @media only screen and (min-width: 998px) {
+        width:auto;
+        flex: none;
       }
     }
-    @media only screen and (max-width: 998px) {
-      display: flex;
-      overflow-y: scroll;
-      @include removeScrollBars();
-      padding-bottom: 25px; // shadow /
+    @media only screen and (min-width: 998px) {
+      display: grid;
+      overflow-y: auto;
     }
-  }
-  @media only screen and (max-width: 998px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  @media only screen and (max-width: 520px) {
-    grid-gap: 25px;
   }
 }

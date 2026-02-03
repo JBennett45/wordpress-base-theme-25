@@ -11,9 +11,11 @@
 @use "global-parts/header/header_mobile_menu";
 @use "global-parts/footer/footer_main";
 @use "global-parts/wrappers/columned_wraps";
+@use "global-parts/states/loader";
 // [2] Template Parts //
-@use "template-parts/pages/news";
-@use "template-parts/cards/news_card";
+@use "template-parts/pages/default_content";
+  // Cards //
+  @use "template-parts/cards/article";
 // [3] Elements //
 @use "elements/tabbed_content";
 @use "elements/accordion";

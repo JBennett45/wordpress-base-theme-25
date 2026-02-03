@@ -2,7 +2,7 @@
 @use "./../global/typography" as *;
 // global button //
 .button-cst {
-  border: 0;
+  border: 2px solid $black;
   outline: none;
   position: relative;
   width: auto;
@@ -10,7 +10,7 @@
   padding:0 30px;
   display: inline-flex;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 20px;
   transition: all 0.3s;
   cursor: pointer;
   span {

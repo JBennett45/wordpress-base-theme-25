@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta property="og:type" content="website">
-  <!-- https://realfavicongenerator.net/ - create package and paste into favicon asset folder -->
+  <!-- https://realfavicongenerator.net/ -->
   <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri()?>/assets/imgs/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri()?>/assets/imgs/favicon/favicon.svg" />
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri()?>/assets/imgs/favicon/favicon.ico" />
@@ -40,4 +40,4 @@ get_template_part( 'template-parts/overlays/mobile-menu' );
     </div>
   </div>
 </header>
-<main id="main-cst-theme-wrapp-cst">
+<main id="main-cst-theme-wrap-cst">

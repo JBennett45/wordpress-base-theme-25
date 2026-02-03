@@ -1,5 +1,7 @@
 .swiper-single-cst, .swiper-multiple-cst {
   position: relative;
+  margin: 25px 0;
+  border: 2px solid #eee;
   .swiper-slide {
     position:relative;
   }
@@ -11,11 +13,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 10px 0;
     &--active {
       opacity: 1 !important;
       height: auto !important;
       visibility: visible !important;
+      border: 1px solid #eee;
     }
   }
   // pagination //
@@ -26,7 +29,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:10px 0;
+    padding:15px 0;
+    border: 1px solid #eee;
     &--active {
       opacity: 1 !important;
       height: auto !important;
