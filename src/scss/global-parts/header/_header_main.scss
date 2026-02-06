@@ -2,7 +2,6 @@
 @use "./../../mixins/global" as *;
 .basetheme-header-cst {
   background-color: $default;
-  position: fixed;
   z-index: 99;
   width:100%;
   top:0;

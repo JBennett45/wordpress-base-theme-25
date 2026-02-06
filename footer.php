@@ -9,6 +9,7 @@
     </div>
   </div>
 </footer>
+<?php get_template_part( 'template-parts/overlays/mobile-menu' );  ?>
 <?php wp_footer(); ?>
 </body>
 </html>

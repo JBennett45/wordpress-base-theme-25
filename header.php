@@ -19,10 +19,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php 
-wp_body_open(); 
-get_template_part( 'template-parts/overlays/mobile-menu' ); 
-?>
+<?php wp_body_open(); ?>
 <header id="global-theme-hdr-cst" class="basetheme-header-cst">
   <div class="container-cst hdr-container-cst">
     <div class="hdr-container-cst__logo--wrap">
