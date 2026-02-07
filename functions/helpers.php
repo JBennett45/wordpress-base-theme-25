@@ -68,11 +68,19 @@ function jbcst_acf_return_option_field($fieldname) {
     return $fieldname;
   }
 }
-// split names 
+// Split names //
 function jbcst_split_name_field($name) {
   $name = trim($name);
   $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
   $first_name = trim( preg_replace('#'.preg_quote($last_name,'#').'#', '', $name ) );
   return array($first_name, $last_name);
+}
+// CF7 Custom Element return // 
+function jbcst_cf7_element($formID) {
+  echo '<cf-form-extension>';
+    echo '<div class="wpcf-extension-wrap-cst">';
+        echo do_shortcode('[contact-form-7 id="'.$formID.'"]');
+    echo '</div>';
+  echo '</cf-form-extension>';
 }
 ?>

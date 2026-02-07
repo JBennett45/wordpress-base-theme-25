@@ -15,9 +15,7 @@ class PostTypeLoadAndFilter extends HTMLElement {
 
   connectedCallback() {
     this.checkPagedStatus();
-    
     this.btn_load_more.addEventListener('click', this.loadMorePosts.bind(this));
-
     if(this.filter_instance && this.filter_taxonomy) {
       this.filter_instance.querySelectorAll('.filter-item-cst').forEach((filter) => {
         filter.addEventListener('click', this.filterPosts.bind(this));

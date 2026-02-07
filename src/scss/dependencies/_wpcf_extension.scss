@@ -1,5 +1,8 @@
 @use "./../global/colour_scheme" as *;
-.wpcf-master-wrapp-cst {
+.wpcf-extension-wrap-cst {
+
+  border:2px solid red;
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -64,11 +67,11 @@
   }
   &--error {
      p {
-      border-bottom: 1px solid red;;
+      border-bottom: 1px solid red;
     }
   }
   .wpcf7-form-control-wrap {
-    display: none;
+    // display: none;
   }
 }
 // Errors //

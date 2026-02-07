@@ -1,2 +1,2 @@
 <h4>Example Form:</h4>
-<?php echo do_shortcode('[contact-form-7 id="d4cb444" title="Contact form 1"]'); ?>
+<?php echo jbcst_cf7_element('d4cb444'); ?>
