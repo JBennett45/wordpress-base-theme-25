@@ -1,6 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+  
   <title><?php bloginfo( 'name' ); ?></title>
   <meta name="description" content="<?php bloginfo( 'description' ); ?>">
   <meta charset="utf-8">
@@ -16,6 +17,7 @@
   <link rel="manifest" href="<?php echo get_template_directory_uri()?>/assets/imgs/favicon/site.webmanifest" />
 	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+   <?php include_once('inc/setup/css-vars.php'); ?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

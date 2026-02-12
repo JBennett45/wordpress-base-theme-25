@@ -1,10 +1,10 @@
 @use "./../../global/colour_scheme" as *;
 @use "./../../mixins/global" as *;
 .basetheme-header-cst {
-  background-color: $default;
+  background-color: var(--project-primary);
   z-index: 99;
   width:100%;
-  top:0;
+  border:2px solid red;
   .hdr-container-cst {
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
     &__logo--wrap {
       padding:15px;
       span {
-        font-size:2em;
+        font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
       }

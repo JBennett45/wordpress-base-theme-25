@@ -2,7 +2,6 @@
 // vars //
 global $template;
 $fileName = basename($template);
-$show_carousel = get_field('show_carousel_example');
 $show_form = get_field('show_form_example');
 $show_accordion = get_field('show_accordion_example');
 $show_tabs = get_field('show_tabbed_example');
@@ -18,9 +17,6 @@ $show_tabs = get_field('show_tabbed_example');
           echo get_the_content();
         endwhile; 
       } 
-      if($show_carousel) {
-        get_template_part('template-parts/parts/example-swiper');
-      }
       if($show_form) {
         get_template_part('template-parts/parts/example-form');
       }
@@ -31,8 +27,5 @@ $show_tabs = get_field('show_tabbed_example');
         get_template_part('template-parts/parts/example-tabs');
       }
     ?>
-    <a href="<?php echo get_the_permalink('form-example'); ?>" class="button-cst button-cst__icon--btn button-cst--black">
-      <span>Contact</span>
-    </a>
   </div>
 </section>

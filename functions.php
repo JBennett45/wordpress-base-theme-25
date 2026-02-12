@@ -1,6 +1,7 @@
 <?php 
-//-- [0] Cleanup --//
+//-- [0] Cleanup & dev mode --//
 require_once( 'inc/wp-defaults-cleanup.php' );
+require_once( 'inc/admin/development-mode.php' );
 //-- [1] Enqueues --//
 require_once( 'inc/asset-enqueues.php' );
 //--[1] Blocks Disable -- //
@@ -15,5 +16,5 @@ require_once( 'functions/helpers.php' );
 require_once( 'inc/requests/load-more-posts.php' );
 require_once( 'inc/requests/filter-posts.php' );
 //-- [5] Misc --//
-require_once( 'inc/misc/cf7-hooks.php' ); // - add if required with ACF
+// require_once( 'inc/misc/cf7-hooks.php' );
 ?>

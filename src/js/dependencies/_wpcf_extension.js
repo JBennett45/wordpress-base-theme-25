@@ -3,30 +3,43 @@ class CustomContactFormExtension extends HTMLElement {
   constructor() {
     super();
     this.form = this.querySelector('form');
+    this.form_wrap = this.querySelector('.wpcf-extension-wrap-cst');
+
+    this.custom_acceptance = this.querySelector('.custom-acceptance-cst');
   }
 
   connectedCallback() {
-    console.log(this.form);
+    if(this.custom_acceptance) {
+      this.form.querySelectorAll('.custom-acceptance-cst').forEach((acceptance) => {
+        acceptance.addEventListener('click', this.customAccept.bind(this));
+      });
+    }
+    this.customListeners();
+  }
 
-    // Highlight GDPR box if submitted prior //
-    this.form.addEventListener( 'wpcf7submit', function( event ) {
-      const formID = event.detail.unitTag;
-      // const gdprCheck = document.querySelector('#' + formID + ' .acceptance-checkbox-cst');
+  customAccept = (e) => {
+    console.log(e.currentTarget);
+    // console.log(e.target);
+  }
 
-      console.log(formID);
-
-      // if(gdprCheck) {
-      //   document.querySelectorAll('#' + formID + ' .acceptance-checkbox-cst').forEach( (allInstances) => {
-      //     allInstances.classList.remove('acceptance-checkbox-cst--error');
-      //   });
-      //   let input_check = document.querySelector('#' + formID + ' .acceptance-checkbox-cst .wpcf7-form-control-wrap input');
-      //   if(input_check.checked == false) {
-      //     gdprCheck.classList.add("acceptance-checkbox-cst--error");
-      //   }
-      // }
+  customListeners = () => {
+    this.form.addEventListener( 'wpcf7invalid', function(e) {
+      document.querySelector('.wpcf7-response-output').classList.remove('alertform-warning');
+      document.querySelector('.wpcf7-response-output').classList.add('alertform-danger');
     }, false );
-
-
+    this.form.addEventListener( 'wpcf7spam', function(e) {
+      document.querySelector('.wpcf7-response-output').classList.remove('alertform-danger');
+      document.querySelector('.wpcf7-response-output').classList.add('alertform-warning');
+    }, false );
+    this.form.addEventListener( 'wpcf7mailfailed', function(e) {
+      document.querySelector('.wpcf7-response-output').classList.remove('alertform-danger');
+      document.querySelector('.wpcf7-response-output').classList.add('alertform-warning');
+    }, false );
+    this.form.addEventListener( 'wpcf7mailsent', function(e) {
+      document.querySelector('.wpcf7-response-output').classList.remove('alertform-danger');
+      document.querySelector('.wpcf7-response-output').classList.remove('alertform-warning');
+      document.querySelector('.wpcf7-response-output').classList.add('alertform-success');
+    }, false );
   }
 }
 

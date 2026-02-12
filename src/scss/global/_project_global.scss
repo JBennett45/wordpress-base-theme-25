@@ -6,7 +6,7 @@
 }
 html {
 	scroll-behavior: smooth;
-	font-size: 16px;
+	font-size: var(--body-fs);
 }
 body {
   -webkit-font-smoothing: antialiased;
