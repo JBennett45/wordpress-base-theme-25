@@ -1,11 +1,9 @@
-@use "./../../global/colour_scheme" as *;
 .post-snippet-output-cst {
-  border-bottom: 1px solid $default;
+  border-bottom: 1px solid var(--project-primary);
   margin-bottom: 15px;
   padding:15px 0;
-  border:2px solid red;
   a {
-    color: $default;
+    color: var(--light-project-primary);
     text-transform: uppercase;
   }
 }

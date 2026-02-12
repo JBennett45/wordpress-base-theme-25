@@ -1,20 +1,19 @@
-@use "./../../global/colour_scheme" as *;
 @use "./../../mixins/global" as *;
-.basetheme-header-cst {
+.header-cst {
   background-color: var(--project-primary);
   z-index: 99;
   width:100%;
-  border:2px solid red;
   .hdr-container-cst {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height:75px;
-    color: $white;
+    color: var(--white);
     &__logo--wrap {
-      padding:15px;
+      padding:0 1rem;
       span {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
         font-weight: 700;
         text-transform: uppercase;
       }
@@ -36,14 +35,13 @@
               justify-content: center;
               height:100%; 
               width:100%;
-              padding:15px; 
-              // styling //
+              padding:1rem; 
               text-decoration: none;
               font-weight: 700;
-              color: $white;
-              @include responsiveFontSize();
+              color: var(--white);
+              @include responsiveFontSize(1.1, 1.1, 1);
             }
-            // Dropdown hover control //
+            // Dropdown //
             .sub-menu {
               visibility: hidden;
               opacity: 0;
@@ -55,30 +53,27 @@
               width:auto;
               white-space: nowrap; 
               transition: 0.25s all;
-              // add dropdwon styles here //
-              background-color: $white;
-              border: 1px solid $default;
+              background-color: var(--white);
+              border: 1px solid var(--project-primary);
               border-top:0;
               border-bottom:0;
               li {
                 display: block;
-                border-bottom:1px solid $default;
+                border-bottom:1px solid var(--project-primary);
                 a {
                   justify-content: flex-start;
-                  // styling //
-                  color: $onxy;
+                  color: var(--black);
                   font-weight:400; 
                 }
                 .sub-menu {
                   left: 100%;
-                  top:-1px;
+                  top:0;
                   transition: 0.25s all;
                   li {
-                    border-top:1px solid $default;
                     a {
-                      color: $default;
+                      color: var(--black);;
+                      // disable further tier support //
                       .sub-menu {
-                        // prevent further, only support three tier //
                         display: none; 
                       }
                     }
@@ -89,17 +84,16 @@
                 }
               }
             }
-            // Drodown chevs //
             .bst-opt-chevron-active-cst {
               display: none;
               align-items: center;
               justify-content: center;
               height:100%;
-              margin: 0 0 0 5px;
+              margin: 0 0 0 0.25rem;
               position: relative;
-              right:-5px;
+              right:-0.25rem;
               svg {
-                width:12px; height:12px;
+                width:1rem; height:1rem;
               }
             }
           }
@@ -114,13 +108,12 @@
                   transform: rotate(-90deg);
                   margin: 0 0 0 auto;
                   right:0;
-                  // arrow dropdown colour //
                   svg {
-                    fill: $onxy;
+                    fill: var(--black)
                   }
                 }
                 li {
-                  // prevent further, only support three tier //
+                  border-top:0;
                   .bst-opt-chevron-active-cst {
                     display: none; 
                   }
@@ -148,9 +141,8 @@
             }
             .bst-opt-chevron-active-cst {
               display: flex;
-              // arrow desktop colour //
               svg {
-                fill: $white;
+                fill: var(--white)
               }
             }
           }
@@ -162,21 +154,21 @@
     }
     .mbl-toggle-wrapp {
       display: none;
-      width:30px;
+      width:2rem;
       z-index: 99;
       cursor: pointer;
       span {
         display: block; 
         border: none;
-        height: 3px;
+        height: 0.2rem;
         width: 100%;
         transition:  all .35s ease;
-        background-color: $white;
+        background-color: var(--white);
         &:nth-of-type(2) {
-          margin-top: 7px;
+          margin-top: 0.5rem;
         }
         &:nth-of-type(3) {
-          margin-top: 7px;
+          margin-top: 0.5rem;
         }
       }
       &.mbl-toggle-activated {
@@ -188,7 +180,7 @@
           }
           &:nth-of-type(3) {
             transform: rotate(-45deg);
-            margin-top:-3px;
+            margin-top:-0.2rem;
           }
         }
       }

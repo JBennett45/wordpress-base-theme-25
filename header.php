@@ -22,7 +22,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header id="global-theme-hdr-cst" class="basetheme-header-cst">
+<header id="global-header-cst" class="header-cst">
   <div class="container-cst hdr-container-cst">
     <div class="hdr-container-cst__logo--wrap">
       <a href="<?php echo get_home_url(); ?>">

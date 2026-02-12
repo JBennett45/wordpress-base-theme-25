@@ -15,15 +15,13 @@
   object-position: center;
 }
 // Resuable font with desktop and mobile input //
-@mixin responsiveFontSize( $desktop: 16, $tablet: 16, $mobile: 12 ) {
-  font-size: $desktop + px;
-  line-height: 1.75em;
+@mixin responsiveFontSize( $desktop: 1, $tablet: 1, $mobile: 0.75 ) {
+  font-size: $desktop + rem;
+  line-height: calc($desktop + 1) + rem;
   @media only screen and (max-width: 998px) {
-    font-size: $tablet + px;
-    line-height: 1.75em;
+    font-size: $tablet + rem;
   }
   @media only screen and (max-width: 520px) {
-    font-size: $mobile + px;
-    line-height: 1.25em;
+    font-size: $mobile + rem;
   }
 }

@@ -1,7 +1,7 @@
 window.onscroll = (e) => {
   // set your header here //
-  const global_header = document.getElementById('id-name');
-  if(global_header) {
+  const example_element = document.getElementById('element-example');
+  if(example_element) {
     if (window.pageYOffset > 115) {
       // do something //
     } else {

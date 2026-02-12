@@ -1,4 +1,3 @@
-@use "./../global/colour_scheme" as *;
 .gbl-site-pagination-cst {
   display: flex;
   align-items: center;
@@ -14,6 +13,6 @@
     }
   }
   .current-cst {
-    color: $default;
+    color: var(--project-primary);
   }
 }

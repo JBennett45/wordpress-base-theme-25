@@ -1,9 +1,8 @@
-@use "./../../global/colour_scheme" as *;
 @use "./../../mixins/global" as *;
 #mbl-menu-ovrr-wrapp {
   position: fixed;
   z-index:50;
-  background-color: $default;
+  background-color: var(--dark-project-primary);
   top: 75px; // or change to your header height //
   left: 0;
   width: 100%;
@@ -31,7 +30,7 @@
             // styling //
             text-decoration: none;
             font-weight: 700;
-            color: $white;
+            color: var(--white);
              @include responsiveFontSize();
           }
           // dropdown //
@@ -85,7 +84,7 @@
             display: flex;
             // arrow desktop colour //
             svg {
-              fill: $white;
+              fill: var(--white);
             }
           }
         }
