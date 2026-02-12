@@ -8,5 +8,10 @@
     --black: #000000;
     /* Font Sizes */
     --body-fs: 16px;
+
+    /* Alerts */
+    --alert-success: #5CB85C;
+    --alert-warning: #FF9966;
+    --alert-error: #D0342C;
   }
 </style>

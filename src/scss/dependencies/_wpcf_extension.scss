@@ -34,13 +34,13 @@
   align-items: center;
   position: relative;
   margin: 1rem 0;
-  border:1px solid red;
+  padding:1rem;
+  border:1px solid #eee;
   &__checkbox {
     width:28px;
     height:28px;
-    border-radius: 50%;
     background-color: #FFFFFF;
-    border:1px solid $black;
+    border:1px solid var(--black);
     position: relative;
     margin-right: 10px;
     &:before {
@@ -50,8 +50,7 @@
       top:4px;left:4px;
       width: 18px;
       height: 18px;
-      background-color: green;
-      border-radius: 50%;
+      background-color: var(--black);
     }
     &--active {
       &:before {
@@ -64,15 +63,18 @@
     p {
       font-size: 1rem;
       line-height: 1.25rem;
+      padding:0 !important;
+      margin:0 !important;
     }
   }
   &--error {
      p {
-      border-bottom: 1px solid red;
+      color: var(--alert-error);
+      text-decoration: underline;
     }
   }
   .wpcf7-form-control-wrap {
-    // display: none;
+    display: none !important;
   }
 }
 // Errors //
@@ -87,16 +89,16 @@
   width: 100%;
 }
 .alertform-success {
-  background-color: green;
-  color: #FFFFFF;
+  background-color: var(--alert-success);
+  color: var(--white);
 }
 .alertform-warning {
-  background-color: orange;
-  color: #FFFFFF;
+  background-color: var(--alert-warning);
+  color: var(--white);
 }
 .alertform-danger {
-  background-color: red;
-  color: #FFFFFF;
+  background-color: var(--alert-error);
+  color: var(--white);
 }
 span.wpcf7-not-valid-tip {
   position: absolute;
@@ -105,5 +107,5 @@ span.wpcf7-not-valid-tip {
   right:0.5rem;
   font-size: 0.5rem;
   line-height: 1rem;
-  color: red;
+  color: var(--alert-error);
 }
