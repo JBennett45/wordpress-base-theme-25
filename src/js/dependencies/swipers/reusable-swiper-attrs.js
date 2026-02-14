@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 const swipers = [];
-// Single carousel setup | powered by swiper.js (webpack) //
+// Single carousel setup //
 document.querySelectorAll('.swiper-single-cst').forEach(function(singleSwiper) {
   // General vars | set from attributes // 
   let carouselDirection = singleSwiper.getAttribute('data-swiper-direction'); // vertical or horizonatal //

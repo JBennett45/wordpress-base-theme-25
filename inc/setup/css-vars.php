@@ -1,5 +1,9 @@
 <style>
   :root {
+    /* Container */
+    --container-max: 1600px;
+    --desktop-padding: 3rem;
+    --mobile-padding: 2rem;
     /* Colours */
     --project-primary: #424A54;
     --dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);

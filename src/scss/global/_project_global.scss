@@ -12,23 +12,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 	position: relative;
-	min-height:100vh;
-	display: grid;
-  grid-template-rows: auto 1fr auto; 
 }
 .global-block-body-scroll-cst {
 	overflow: hidden;
 }
 #main-cst-theme-wrap-cst {
+	overflow-x: hidden;
 }
 .container-cst {
-	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 25px;
-  @media only screen and (min-width: 1225px) {
-		padding:0;
-  }
+	padding: 0 var(--mobile-padding);
+	&[data-contain="yes"] { 
+		max-width: var(--container-max);
+	}
+	@media only screen and (min-width: 998px) {
+		padding: 0 var(--desktop-padding);
+	}
 }
 img {
   max-width:100%;
