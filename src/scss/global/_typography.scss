@@ -32,36 +32,73 @@ $font-declaration: "Montserrat", Helvetica, Arial, sans-serif;
 
 body {
   font-family: $font-declaration;
+  font-size:16px;
+  line-height:24px;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-weight: 700;
   margin: 15px 0;
 }
 h1 {
   font-size: 3.5rem;
+  line-height: 4.5rem;
 }
 h2 {
   font-size: 3rem;
+  line-height: 4rem;
 }
 h3 {
   font-size: 2.5rem;
+  line-height: 3.5rem;
 }
 h4 {
   font-size: 2rem;
+  line-height: 3rem;
 }
 h5 {
   font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 h6 {
   font-size: 1rem;
+  line-height: 2rem;
 }
 p {
   font-size:1rem;
+  line-height: 2rem;
+}
+p {
+  font-size:1rem;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 strong {
   font-weight: 700;
+}
+#main-cst-theme-wrapp-cst {
+	overflow-x: hidden;
+	position: relative;
+  ul {
+    padding: 15px 0;
+    margin-left: 15px;
+    li {
+      list-style-type: none;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 15px;
+      &:before {
+        content: '>';
+        position: absolute;
+        top:0;left:0;
+        font-size:16px;
+      }
+      &:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
 }

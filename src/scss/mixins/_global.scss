@@ -6,3 +6,22 @@
     display: none; 
   }
 }
+// Image stetech to relative wrapper //
+@mixin stretchAbsoluteImgWrapp() {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+// Resuable font with desktop and mobile input //
+@mixin responsiveFontSize( $desktop: 1, $tablet: 1, $mobile: 0.75 ) {
+  font-size: $desktop + rem;
+  line-height: calc($desktop + 1) + rem;
+  @media only screen and (max-width: 998px) {
+    font-size: $tablet + rem;
+  }
+  @media only screen and (max-width: 520px) {
+    font-size: $mobile + rem;
+  }
+}

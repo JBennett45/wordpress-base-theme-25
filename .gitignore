@@ -5,6 +5,9 @@ node_modules
 node_modules/*
 package-lock.json
 
+# unmin (&un enque) version of login
+assets/css/login.css
+
 # local hot reload 
 prepros.config
 prepros*

@@ -1,33 +1,27 @@
-@use "./../global/colour_scheme" as *;
-// tabs //
-.tabbed-content-controller-cst {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  .tabbed-control-input-cst {
-    cursor: pointer;
-    transition: 0.3s all;
-    // Styles below //
-    padding:15px;
+.jb-custom-tabs-cst {
+  // Title | tabs //
+  .jb-custom-tabs-title-cst {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &__item {
+      border: 4px solid blue;
+      &--active {
+        border-color: green;
+      }
+    }
   }
-  .active-tabbed-control-input-cst {
-    display: block;
-    // Styles below //
-    color: $mainBG;
-    font-weight: 700;
-    text-decoration: underline;
-  }
-}
-// content to show //
-.tabbed-content-display-cst {
-  .tabbed-control-output-cst {
-    display: none;
-    // Styles below //
-  }
-  .active-tabbed-control-output-cst {
-    display: block;
-    // Styles below //
-    padding: 25px 15px;
+  .jb-custom-tabs-content-cst {
+    overflow: hidden;
+    &__item {
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+      transition: all 0.25s;
+      &--active {
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+      }
+    }
   }
 }

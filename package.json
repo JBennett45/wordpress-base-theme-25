@@ -15,8 +15,7 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/JBennett45/wordpress-base-theme-25/issues"
-  },
-  "homepage": "https://github.com/JBennett45/wordpress-base-theme-25#readme"
+  "dependencies": {
+    "swiper": "^12.0.3"
+  }
 }

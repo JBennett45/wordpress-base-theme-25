@@ -1,0 +1,103 @@
+@use "./../../mixins/global" as *;
+#mbl-menu-ovrr-wrapp {
+  position: fixed;
+  z-index:50;
+  background-color: var(--dark-project-primary);
+  top: 75px; // or change to your header height //
+  left: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all;
+  overflow: hidden;
+  .mbl-menu-ovrr-inner-wrapp {
+    height:100%;
+    overflow-x: scroll;
+    @include removeScrollBars();
+    nav {
+      ul {
+        list-style-type: none;
+        li {
+          a {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height:100%; 
+            width:100%;
+            padding:10px 15px; 
+            // styling //
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--white);
+             @include responsiveFontSize();
+          }
+          // dropdown //
+          .sub-menu {
+            display: none;
+            padding-left:15px;
+            margin-bottom: 5px;;
+          }
+          // Drodown chevs //
+          .bst-opt-chevron-active-cst {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height:100%;
+            margin: 0 0 0 15px;
+            padding:10px;
+            position: relative;
+            transition: 0.3s all;
+            svg {
+              width:12px; height:12px;
+            }
+          }
+          // State - Mobile DROPDOWN is active //
+          .active-mobile-submenu-cst {
+            display: block !important;
+          }
+        }
+        // active ITEM //
+        .active-mobile-chevron-cst {
+          transform: rotate(-180deg);
+        }
+        // Visible states of dropdowns //
+        .menu-item-has-children {
+          .sub-menu {
+            .bst-opt-chevron-active-cst {
+              display: none;
+            }
+            .menu-item-has-children {
+              .bst-opt-chevron-active-cst {
+                display: flex;
+              }
+              li {
+                // prevent further, only support three tier //
+                .bst-opt-chevron-active-cst {
+                  display: none; 
+                }
+              }
+            }
+          }
+          .bst-opt-chevron-active-cst {
+            display: flex;
+            // arrow desktop colour //
+            svg {
+              fill: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+  // active //
+  &.activated-mbl-menu-ovrr-wrapp {
+    opacity: 1;
+    visibility: visible;
+  }
+  // no show on desktop or whatever breakpoint you want the hamburger to come into touch // 
+  @media only screen and (min-width: 998px) {
+    display: none;
+  }
+}

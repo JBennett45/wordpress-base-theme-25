@@ -1,0 +1,111 @@
+.wpcf-extension-wrap-cst {
+  padding:0 0 2rem 0;
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select  {
+    display: block;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+    padding: 1rem;
+    margin:0 0 1rem 0;
+    width:100%;
+    box-shadow: none;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: inherit;
+    border:1px solid var(--light-grey);
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+}
+.wpcf7-spinner {
+  display: block;
+  margin:1rem auto 0 auto;
+}
+// Custom accceptance //
+.custom-acceptance-cst {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 1rem 0;
+  padding: 1rem;
+  border:1px solid var(--light-grey);
+  &__checkbox {
+    width:2rem;
+    height:2rem;
+    background-color: var(--white);
+    border:1px solid var(--black);
+    position: relative;
+    margin-right: 1rem;
+    &:before {
+      content: '';
+      position: absolute;
+      display: none;
+      top:0.3rem;
+      left:0.3rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-color: var(--alert-success);
+    }
+    &--active {
+      &:before {
+        display: block;
+      }
+    }
+  }
+  &__message {
+    max-width: calc(100% - 28px);
+    p {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      padding:0 !important;
+      margin:0 !important;
+    }
+  }
+  &--error {
+     p {
+      color: var(--alert-error);
+      text-decoration: underline;
+    }
+  }
+  .wpcf7-form-control-wrap {
+    display: none !important;
+  }
+}
+// Errors //
+.wpcf7-response-output {
+  margin: 0 auto !important;
+  padding: 0.75rem !important;
+  border:0 !important;
+  border-radius: 0;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+.alertform-success {
+  background-color: var(--alert-success);
+  color: var(--white);
+}
+.alertform-warning {
+  background-color: var(--alert-warning);
+  color: var(--white);
+}
+.alertform-danger {
+  background-color: var(--alert-error);
+  color: var(--white);
+}
+span.wpcf7-not-valid-tip {
+  position: absolute;
+  z-index: 0;
+  bottom: 0.25rem;
+  right:0.5rem;
+  font-size: 0.5rem;
+  line-height: 1rem;
+  color: var(--alert-error);
+}

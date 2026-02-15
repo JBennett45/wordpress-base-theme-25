@@ -2,16 +2,21 @@
 @use "global/normalize";
 @use "global/project_global";
 @use "global/wp_image_alignment";
-
+@use "elements/buttons";
+// Dependencies 
+@use "dependencies/swiper_defaults";
+@use "dependencies/wpcf_extension";
 // [1] Global Parts //
-@use "global-parts/header";
-@use "global-parts/mobile_menu";
-@use "global-parts/footer";
-
+@use "global-parts/header/header_main";
+@use "global-parts/header/header_mobile_menu";
+@use "global-parts/footer/footer_main";
+@use "global-parts/wrappers/columned_wraps";
+@use "global-parts/states/loader";
 // [2] Template Parts //
-@use "template-parts/posts_wrapper";
-@use "template-parts/snippets/post_snippet";
-
-// [3] Elements (styles applied from your component, these files just control the neccessary hide/show etc) //
+@use "template-parts/pages/default_content";
+  // Cards //
+  @use "template-parts/cards/article";
+// [3] Elements //
 @use "elements/tabbed_content";
+@use "elements/accordion";
 @use "elements/pagination";

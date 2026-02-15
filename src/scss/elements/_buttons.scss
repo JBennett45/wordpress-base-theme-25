@@ -1,0 +1,60 @@
+@use "./../global/typography" as *;
+// global button //
+.button-cst {
+  border: 2px solid var(--project-primary);
+  outline: none;
+  position: relative;
+  width: auto;
+  height: 60px;
+  padding:0 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all var(--transition-speed);
+  cursor: pointer;
+  span {
+    position: relative;
+    transition: all var(--transition-speed);
+  }
+  // Icon Element //
+  &__icon--btn {
+    padding: 0 3.5rem 0 2rem;
+    span {
+      &:after {
+        content: '';
+        height:2rem;
+        width:2rem; 
+        border-radius: 50%;
+        background-color: var(--white);
+        background-image:url('../../imgs/bootstrap-icons/arrow-right.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top:-0.5rem;
+        left: calc(100% + 0.75rem);
+        transition: all var(--transition-speed);
+      }
+    }
+    &:hover {
+      span {
+        &:after {
+          background-color: var(--light-project-primary);
+          translate: 0.25rem 0;
+        }
+      }
+    }
+  }
+  // Orange Colour Modifier //
+  &--black {
+    background-color: var(--project-primary);
+    span {
+      color: var(--white);
+    }
+    &:hover {
+      background-color: var(--white);
+      span {
+        color: var(--black);
+      }
+    }
+  }
+}

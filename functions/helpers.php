@@ -61,4 +61,26 @@ function jbcst_acf_return_img_field($img, $class = null) {
     echo 'Error #1: ACF helper function used without plugin instance.';
   }
 }
+// Return theme options instead of needing to do it each call //
+function jbcst_acf_return_option_field($fieldname) {
+  if(class_exists('ACF')) {
+    $fieldname = get_field($fieldname, 'options');
+    return $fieldname;
+  }
+}
+// Split names //
+function jbcst_split_name_field($name) {
+  $name = trim($name);
+  $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
+  $first_name = trim( preg_replace('#'.preg_quote($last_name,'#').'#', '', $name ) );
+  return array($first_name, $last_name);
+}
+// CF7 Custom Element return // 
+function jbcst_cf7_element($formID) {
+  echo '<cf-form-extension>';
+    echo '<div class="wpcf-extension-wrap-cst">';
+        echo do_shortcode('[contact-form-7 id="'.$formID.'"]');
+    echo '</div>';
+  echo '</cf-form-extension>';
+}
 ?>

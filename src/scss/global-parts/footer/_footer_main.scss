@@ -1,0 +1,43 @@
+.basetheme-footer-cst {
+  border-top: 10px solid var(--project-primary);
+  padding:25px 0;
+  .ftr-container-cst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__menu--wrap {
+      ul {
+        list-style-type: none;
+        li {
+          display: inline-block;
+          position: relative;
+          padding-right: 10px;
+          a {
+            font-size: 1rem;
+            line-height: 1rem;
+            text-transform: capitalize;
+          }
+          &:after {
+            content: '';
+            height:100%;
+            width:1px;
+            background-color: var(--black);
+            position: absolute;
+            right:2.5px;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &__date--wrap {
+      span {
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

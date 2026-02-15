@@ -1,0 +1,33 @@
+@use "./../../mixins/global" as *;
+.archive-post-listing-cst {
+  display: grid;
+  grid-gap: 12.5px 25px;
+  position: relative;
+  z-index: 5;
+  &__col-3 {
+    grid-template-columns: repeat(1, 1fr);
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (min-width: 998px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__scroll_mobile {
+    display: flex;
+    overflow-y: scroll;
+    @include removeScrollBars();
+    .archivable-card-cst {
+      width:320px;
+      flex: 0 0 auto;
+      @media only screen and (min-width: 998px) {
+        width:auto;
+        flex: none;
+      }
+    }
+    @media only screen and (min-width: 998px) {
+      display: grid;
+      overflow-y: auto;
+    }
+  }
+}

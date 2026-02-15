@@ -1,6 +1,8 @@
 <?php 
 // [0] Theme Supports & additional backend styles //
 function jb_cst_theme_supports() {
+	$user_check = wp_get_current_user();
+	$masterUsr = strtolower( get_site_option( 'dev_mode_admin_usr_cst' ));
   // Admin Styles //
   function jb_cst_admin_style(){
     wp_register_style( 'cst_wp_admin_css', get_bloginfo('stylesheet_directory') . '/assets/css/admin-styles.css', false, '1.0.0' );
@@ -9,6 +11,9 @@ function jb_cst_theme_supports() {
     wp_enqueue_script( 'cst_wp_admin_js' ); // optional 
   }
   add_action('admin_enqueue_scripts', 'jb_cst_admin_style');
+	if (!is_admin() && current_user_can('administrator') && $user_check->user_login != $masterUsr) {
+		show_admin_bar(false);
+	}
   // Post Thumbnail Support //
 	add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size( 250, 125, array( 'center', 'center')  );
@@ -22,6 +27,7 @@ function jb_cst_theme_supports() {
 			'footer-links' => __( 'Footer Links', 'base-theme' )
 		)
 	);
+	add_filter('wpcf7_autop_or_not', '__return_false');
 }
 add_action( 'after_setup_theme', 'jb_cst_theme_supports' );
 // Pagination support //
