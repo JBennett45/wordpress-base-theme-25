@@ -1,12 +1,14 @@
 .base-master-default-content-cst {
 	padding:125px 0;
 	text-align: center;
-	h5 {
-		font-size: 1.5rem;
-		line-height: 2.2rem;
+	h1, h2, h3, h4, h5, h6 {
 		margin:0;
 	}
 	p {
 		margin: 2rem 0;
+	}
+	h5 {
+		font-style: italic;
+		color: var(--light-project-primary);
 	}
 }
