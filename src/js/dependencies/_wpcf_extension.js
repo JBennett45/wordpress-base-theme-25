@@ -4,7 +4,6 @@ class CustomContactFormExtension extends HTMLElement {
     super();
     this.form = this.querySelector('form');
     this.form_wrap = this.querySelector('.wpcf-extension-wrap-cst');
-
     this.custom_acceptance = this.querySelector('.custom-acceptance-cst');
   }
 
