@@ -3,22 +3,29 @@
     color: var(--black);
     &__title {
       background-color: var(--light-grey);
-      padding: 20px 0;
+      padding: 1rem 0;
       cursor: pointer;
+      border-bottom: 1px solid var(--white)
     }
     &__content {
+      padding: 0;
+      p {
+        margin:0;
+        padding:0;
+      }
     }
-    .content-to-switch-cst {
+    .accordion-vis-control-cst {
       opacity: 0;
       height: 0;
       visibility: hidden;
       transition: all 0.25s;
     }
-    &--active {
-      .content-to-switch-cst {
+    &[data-status="active"] {
+      .accordion-vis-control-cst {
         opacity: 1;
         height: auto;
         visibility: visible;
+        padding:2rem;
       }
     }
   }
