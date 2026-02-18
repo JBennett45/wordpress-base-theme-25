@@ -1,7 +1,7 @@
 // [0] Globals //
-@use "global/normalize";
+@use "./utils/root";
+@use "./utils/normalize";
 @use "global/project_global";
-@use "global/wp_image_alignment";
 @use "elements/buttons";
 // Dependencies 
 @use "dependencies/swiper_defaults";
