@@ -1,4 +1,4 @@
-@use "./../../mixins/global" as *;
+@use "./../../utils/mixins" as *;
 .archive-post-listing-cst {
   display: grid;
   grid-gap: 12.5px 25px;

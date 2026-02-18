@@ -1,4 +1,4 @@
-@use "./../../mixins/global" as *;
+@use "./../../utils/mixins" as *;
 #mbl-menu-ovrr-wrapp {
   position: fixed;
   z-index:50;
@@ -31,7 +31,6 @@
             text-decoration: none;
             font-weight: 700;
             color: var(--white);
-             @include responsiveFontSize();
           }
           // dropdown //
           .sub-menu {
