@@ -14,7 +14,7 @@
   .mbl-menu-ovrr-inner-wrapp {
     height:100%;
     overflow-x: scroll;
-    @include removeScrollBars();
+    @include remove-scrollbars();
     nav {
       ul {
         list-style-type: none;

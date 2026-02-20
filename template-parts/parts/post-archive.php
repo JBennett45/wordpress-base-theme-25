@@ -53,7 +53,7 @@ if($wp_query) {
         ?>
       </div>
       <div class="container-cst news-listings-cst__load-more">
-        <button class="load-more-posts-btn-cst button-cst button-cst__icon-btn">
+        <button class="load-more-posts-btn-cst button-cst button-cst__icon-w-btn">
           <span>Load more</span>
         </button>
       </div>

@@ -52,8 +52,6 @@ function jbcst_acf_return_img_field($img, $class = null) {
       $returnedAlt = get_bloginfo() . ' - awaiting image'; 
     }
     $imgClass = $class ? 'class="' . $class . '"' : null;
-    
-    // send it back //
     echo '<img src="' . $returnedSrc . '" alt="' . $returnedAlt . '" '. $imgClass .'>';
     return;
   } 
