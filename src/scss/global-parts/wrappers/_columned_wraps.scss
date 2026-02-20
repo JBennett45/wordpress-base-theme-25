@@ -16,7 +16,7 @@
   &__scroll_mobile {
     display: flex;
     overflow-y: scroll;
-    @include removeScrollBars();
+    @include remove-scrollbars();
     .archivable-card-cst {
       width:320px;
       flex: 0 0 auto;

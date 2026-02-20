@@ -3,6 +3,8 @@
   --container-max: 1600px;
   --desktop-padding: 3rem;
   --mobile-padding: 2rem;
+  /* Font Sizes */
+  --body-origin: 10px;
   /* Colours */
   --project-primary: #111D4A;
   --dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);
@@ -11,12 +13,15 @@
   --white: #FFFFFF;
   --light-grey: #EEEEEE;
   --black: #000000;
-  /* Font Sizes */
-  --body-origin: 10px;
   /* Alerts */
   --alert-success: #5CB85C;
   --alert-warning: #FF9966;
   --alert-error: #D0342C;
+  /* Radius */
+  --border-radius-xs: 0.8rem;
+  --border-radius-sm: 1.2rem;
+  --border-radius-md: 1.5rem;
+  --border-radius-lg: 2rem;
   /* Misc */
   --transition-speed: 0.25s;
 }

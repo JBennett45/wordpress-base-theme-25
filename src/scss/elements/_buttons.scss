@@ -1,4 +1,3 @@
-@use "./../global/typography" as *;
 // global button //
 .button-cst {
   border: 2px solid var(--project-primary);
@@ -17,7 +16,7 @@
     transition: all var(--transition-speed);
   }
   // Icon Element //
-  &__icon--btn {
+  &__icon-w-btn {
     padding: 0 3.5rem 0 2rem;
     span {
       &:after {
@@ -30,7 +29,7 @@
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        top:-0.5rem;
+        top: 0;
         left: calc(100% + 0.75rem);
         transition: all var(--transition-speed);
       }

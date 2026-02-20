@@ -1,7 +1,9 @@
 // [0] Globals //
-@use "./utils/root";
 @use "./utils/normalize";
-@use "global/project_global";
+@use "./base/root";
+@use "./base/setup";
+// @use "./utils/normalize";
+// @use "global/project_global";
 @use "elements/buttons";
 // Dependencies 
 @use "dependencies/swiper_defaults";
