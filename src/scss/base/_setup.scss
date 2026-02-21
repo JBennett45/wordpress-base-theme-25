@@ -1,4 +1,5 @@
 @use "./typography";
+@use "./../utils/mixins" as *;
 * {
 	box-sizing: border-box;
 	padding:0;
@@ -26,9 +27,6 @@ body {
 	&[data-contain="yes"] { 
 		max-width: var(--container-max);
 	}
-	@media only screen and (min-width: 998px) {
-		padding: 0 var(--desktop-padding);
-	}
 }
 img {
   max-width:100%;
@@ -37,3 +35,8 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+@include breakpoint('md') {
+	.container-cst {
+		padding: 0 var(--desktop-padding);
+	}
+} 
