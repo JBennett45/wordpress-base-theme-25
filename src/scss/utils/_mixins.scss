@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 @use 'sass:string';
-// Breakpoints //
+// Breakpoints - setup //
 $breakpoints: (
   'xs': 375px,
   'sm': 768px,
@@ -9,6 +9,7 @@ $breakpoints: (
   'lg': 1440px,
   'xl': 1920px,
 );
+// Breakpoints - used with - //
 @mixin breakpoint($size) {
   $breakpoint: map.get($breakpoints, $size);
   @if $breakpoint {
@@ -17,7 +18,16 @@ $breakpoints: (
     }
   }
 }
-// remove scroll bars //
+// Flex - used with -  @include flex(column, center, center, 1rem);
+@mixin flex($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch, $gap: 0) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// Remove Scrollbars - used with - @include remove-scrollbars() //
 @mixin remove-scrollbars() {
   -webkit-overflow-scrolling: touch; 
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -25,7 +35,7 @@ $breakpoints: (
     display: none; 
   }
 }
-// Image stetech to relative wrapper //
+// Image Stretch - used with - @include strech-img()  //
 @mixin strech-img() {
   position: absolute;
   top:0; left:0;
@@ -33,14 +43,16 @@ $breakpoints: (
   object-fit: cover;
   object-position: center;
 }
-// Resuable font with desktop and mobile input //
-@mixin responsive-font( $desktop: 1, $tablet: 1, $mobile: 0.75 ) {
-  font-size: $desktop + rem;
-  line-height: calc($desktop + 1) + rem;
-  @media only screen and (max-width: 998px) {
+// Resuable Font - used with -  used with - @include responsive-font(1.4, 1.6, 1.6) //
+@mixin responsive-font( $mobile: 1.4, $tablet: 1.6,  $desktop: 1.6 ) {
+  font-size: $mobile + rem;
+  line-height: calc($mobile + 1) + rem;
+  @media only screen and (min-width: 768px) {
     font-size: $tablet + rem;
+    line-height: calc($tablet + 1) + rem;
   }
-  @media only screen and (max-width: 520px) {
-    font-size: $mobile + rem;
+  @media only screen and (min-width: 1024px) {
+     font-size: $desktop + rem;
+    line-height: calc($desktop + 1) + rem;
   }
 }
