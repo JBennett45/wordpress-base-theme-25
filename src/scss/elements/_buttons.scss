@@ -1,17 +1,18 @@
-// global button //
+@use "./../utils/mixins" as *;
 .button-cst {
   border: 2px solid var(--project-primary);
   outline: none;
   position: relative;
   width: auto;
-  height: 60px;
   padding:0 1.5rem;
   display: inline-flex;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: var(--btn-radius-sm);
   transition: all var(--transition-speed);
+  height: var(--btn-height-sm);
   cursor: pointer;
   span {
+    font-size: var(--btn-font-size);
     position: relative;
     transition: all var(--transition-speed);
   }
@@ -21,15 +22,15 @@
     span {
       &:after {
         content: '';
-        height:2rem;
-        width:2rem; 
+        height:1.6rem;
+        width:1.6rem; 
         border-radius: 50%;
         background-color: var(--white);
         background-image:url('../../imgs/bootstrap-icons/arrow-right.svg');
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 75%;
         position: absolute;
-        top: 0;
         left: calc(100% + 0.75rem);
         transition: all var(--transition-speed);
       }
@@ -37,7 +38,7 @@
     &:hover {
       span {
         &:after {
-          background-color: var(--light-project-primary);
+          background-color: var(--highlight-project-primary);
           translate: 0.25rem 0;
         }
       }
@@ -57,3 +58,10 @@
     }
   }
 }
+
+@include breakpoint('md') {
+	.button-cst {
+     height: var(--btn-height-lg);
+     border-radius: var(--btn-radius-lg);
+  }
+} 
