@@ -1,14 +1,7 @@
-@use "./../../utils/mixins" as *;
+@use './../../utils/mixins' as *;
 .base-master-default-content-cst {
-	padding:10rem 0;
-	h1, h2, h3, h4, h5, h6 {
-		margin:0;
-	}
-	p {
-		margin: 2rem 0;
-	}
-	h5 {
-		font-style: italic;
-		color: var(--light-project-primary);
-	}
+  padding: 5rem 0;
+  &__inner {
+    @include flex(column, nowrap, flex-start, flex-start, 1rem);
+  }
 }

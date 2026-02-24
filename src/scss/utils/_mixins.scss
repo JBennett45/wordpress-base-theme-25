@@ -14,37 +14,45 @@ $breakpoints: (
   $breakpoint: map.get($breakpoints, $size);
   @if $breakpoint {
     @media (min-width: $breakpoint) {
-        @content;
+      @content;
     }
   }
 }
-// Flex - used with -  @include flex(column, center, center, 1rem);
-@mixin flex($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch, $gap: 0) {
-    display: flex;
-    flex-flow: $direction $wrap;
-    justify-content: $justify;
-    align-items: $align;
-    gap: $gap;
+// Flex - used with -  @include flex(column, nowrap, center, center, 1rem);
+@mixin flex(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
 }
 
 // Remove Scrollbars - used with - @include remove-scrollbars() //
 @mixin remove-scrollbars() {
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   &::-webkit-scrollbar {
-    display: none; 
+    display: none;
   }
 }
 // Image Stretch - used with - @include strech-img()  //
 @mixin strech-img() {
   position: absolute;
-  top:0; left:0;
-  width:100%; height:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 // Resuable Font - used with -  used with - @include responsive-font(1.4, 1.6, 1.6) //
-@mixin responsive-font( $mobile: 1.4, $tablet: 1.6,  $desktop: 1.6 ) {
+@mixin responsive-font($mobile: 1.4, $tablet: 1.6, $desktop: 1.6) {
   font-size: $mobile + rem;
   line-height: calc($mobile + 1) + rem;
   @media only screen and (min-width: 768px) {
@@ -52,7 +60,7 @@ $breakpoints: (
     line-height: calc($tablet + 1) + rem;
   }
   @media only screen and (min-width: 1024px) {
-     font-size: $desktop + rem;
+    font-size: $desktop + rem;
     line-height: calc($desktop + 1) + rem;
   }
 }

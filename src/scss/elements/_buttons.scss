@@ -1,20 +1,20 @@
-@use "./../utils/mixins" as *;
+@use './../utils/mixins' as *;
 .button-cst {
   border: 2px solid var(--project-primary);
-  outline: none;
-  position: relative;
-  width: auto;
-  padding:0 1.5rem;
-  display: inline-flex;
-  align-items: center;
   border-radius: var(--btn-radius-sm);
   transition: all var(--transition-speed);
   height: var(--btn-height-sm);
+  outline: none;
+  position: relative;
+  width: auto;
+  padding: 0 1.5rem;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
   span {
     font-size: var(--btn-font-size);
-    position: relative;
     transition: all var(--transition-speed);
+    position: relative;
   }
   // Icon Element //
   &__icon-w-btn {
@@ -22,17 +22,18 @@
     span {
       &:after {
         content: '';
-        height:1.6rem;
-        width:1.6rem; 
+        background-color: var(--white);
+        transition: all var(--transition-speed);
+        height: 1.6rem;
+        width: 1.6rem;
         border-radius: 50%;
         background-color: var(--white);
-        background-image:url('../../imgs/bootstrap-icons/arrow-right.svg');
+        background-image: url('../../imgs/bootstrap-icons/arrow-right.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 75%;
         position: absolute;
         left: calc(100% + 0.75rem);
-        transition: all var(--transition-speed);
       }
     }
     &:hover {
@@ -45,23 +46,19 @@
     }
   }
   // Orange Colour Modifier //
-  &--black {
+  &--primary {
     background-color: var(--project-primary);
     span {
       color: var(--white);
     }
     &:hover {
-      background-color: var(--white);
-      span {
-        color: var(--black);
-      }
+      background-color: var(--dark-project-primary);
     }
   }
 }
-
 @include breakpoint('md') {
-	.button-cst {
-     height: var(--btn-height-lg);
-     border-radius: var(--btn-radius-lg);
+  .button-cst {
+    height: var(--btn-height-lg);
+    border-radius: var(--btn-radius-lg);
   }
-} 
+}

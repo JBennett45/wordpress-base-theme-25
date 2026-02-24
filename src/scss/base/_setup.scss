@@ -1,42 +1,35 @@
-@use "./typography";
-@use "./../utils/mixins" as *;
+@use './typography';
+@use './../utils/mixins' as *;
 * {
-	box-sizing: border-box;
-	padding:0;
-	margin:0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 html {
-	scroll-behavior: smooth;
-	font-size: var(--body-origin);
+  scroll-behavior: smooth;
+  font-size: var(--body-origin);
 }
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	position: relative;
+  position: relative;
 }
-.global-block-body-scroll-cst {
-	overflow: hidden;
+#main-content-wrap-cst {
+  overflow-x: hidden;
 }
-#main-cst-theme-wrap-cst {
-	overflow-x: hidden;
+.element-overflow-block-csr {
+  overflow: hidden;
 }
 .container-cst {
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 var(--mobile-padding);
-	&[data-contain="yes"] { 
-		max-width: var(--container-max);
-	}
-}
-img {
-  max-width:100%;
-}
-a {
-	color: inherit;
-	text-decoration: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--mobile-padding);
+  &[data-contain='yes'] {
+    max-width: var(--container-max);
+  }
 }
 @include breakpoint('md') {
-	.container-cst {
-		padding: 0 var(--desktop-padding);
-	}
-} 
+  .container-cst {
+    padding: 0 var(--desktop-padding);
+  }
+}

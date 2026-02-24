@@ -18,6 +18,7 @@ if($wp_query) {
 ?>
   <section class="base-master-default-content-cst">
     <post-archive-control 
+      class="base-master-default-content-cst__inner"
       data-queryvars="<?php echo base64_encode(serialize($wp_query->query_vars)) ?>"
       data-paged="<?php echo $wp_query->query_vars['paged'] ?>"
       data-postcount="<?php echo $wp_query->post_count ?>"
@@ -53,7 +54,7 @@ if($wp_query) {
         ?>
       </div>
       <div class="container-cst news-listings-cst__load-more">
-        <button class="load-more-posts-btn-cst button-cst button-cst__icon-w-btn">
+        <button class="load-more-posts-btn-cst button-cst button-cst--primary button-cst__icon-w-btn">
           <span>Load more</span>
         </button>
       </div>

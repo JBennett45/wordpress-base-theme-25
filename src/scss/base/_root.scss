@@ -5,21 +5,24 @@
   --mobile-padding: 2rem;
   /* Font Sizes */
   --body-origin: 10px;
+  --font-standard: 1.6rem;
   /* Colours */
-  --project-primary: #111D4A;
+  --project-primary: #111d4a;
   --dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);
   --light-project-primary: lch(from var(--project-primary) calc(l + 20) c h);
-  --highlight-project-primary: lch(from var(--project-primary) calc(l + 50) c h);
-  --white: #FFFFFF;
-  --light-grey: #EEEEEE;
+  --highlight-project-primary: lch(
+    from var(--project-primary) calc(l + 50) c h
+  );
+  --white: #ffffff;
+  --light-grey: #eeeeee;
   --black: #000000;
   /* Alerts */
-  --alert-success: #5CB85C;
-  --alert-warning: #FF9966;
-  --alert-error: #D0342C;
+  --alert-success: #5cb85c;
+  --alert-warning: #ff9966;
+  --alert-error: #d0342c;
   /* Buttons */
   --btn-font-size: 1.4rem;
-  --btn-radius-sm: 10px;  
+  --btn-radius-sm: 10px;
   --btn-radius-lg: 20px;
   --btn-height-sm: 40px;
   --btn-height-lg: 60px;
