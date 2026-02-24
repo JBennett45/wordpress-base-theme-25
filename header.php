@@ -38,4 +38,4 @@
     </div>
   </div>
 </header>
-<main id="main-cst-theme-wrap-cst">
+<main id="main-content-wrap-cst">
