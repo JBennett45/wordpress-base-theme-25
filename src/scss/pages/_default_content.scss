@@ -1,0 +1,22 @@
+@use './../utils/mixins' as *;
+.base-master-default-content-cst {
+  padding: 7.5rem 0;
+  &__inner {
+    @include flex(column, nowrap, flex-start, flex-start, 1rem);
+  }
+  &__filter-wrapper {
+    @include flex(row, wrap, flex-start, flex-start, 1rem);
+  }
+  &__filter-item {
+    border: 1px solid var(--project-primary);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem 2rem;
+    font-weight: 700;
+  }
+  &__posts-wrapper {
+    display: grid;
+    position: relative;
+    grid-gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  }
+}

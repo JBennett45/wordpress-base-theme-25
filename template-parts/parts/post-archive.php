@@ -27,9 +27,9 @@ if($wp_query) {
     >
       <?php 
         if($filter_criteria) {
-          echo '<div class="container-cst archive-post-filtering-cst" data-taxonomy="'.$taxonomy.'">';
+          echo '<div class="custom-tax-filter-wrapper container-cst base-master-default-content-cst__filter-wrapper" data-taxonomy="'.$taxonomy.'">';
           ?>
-            <div class="filter-item-cst" data-term-id="all">
+            <div class="custom-tax-filter-item base-master-default-content-cst__filter-item" data-term-id="all">
               <span>All</span>
             </div>  
           <?php
@@ -37,7 +37,7 @@ if($wp_query) {
               $name = $filter->name;
               $id = $filter->term_id;
               ?>
-                <div class="filter-item-cst" data-term-id="<?php echo $id; ?>">
+                <div class="custom-tax-filter-item base-master-default-content-cst__filter-item" data-term-id="<?php echo $id; ?>">
                   <span><?php echo $name; ?></span>
                 </div>
               <?php
@@ -45,7 +45,7 @@ if($wp_query) {
           echo '</div>';
         }
       ?>
-      <div class="container-cst archive-post-listing-cst archive-post-listing-cst__col-3">
+      <div class="custom-posts-main-wrap container-cst base-master-default-content-cst__posts-wrapper">
         <?php 
           while ( $wp_query->have_posts() ) : $wp_query->the_post();
             echo get_template_part('template-parts/cards/news'); 
