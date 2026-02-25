@@ -1,24 +1,26 @@
 // [0] Globals //
-@use "./utils/normalize";
-@use "./base/root";
-@use "./base/setup";
+@use './utils/normalize';
+@use './base/root';
+@use './base/setup';
 // @use "./utils/normalize";
 // @use "global/project_global";
-@use "elements/buttons";
-// Dependencies 
-@use "dependencies/swiper_defaults";
-@use "dependencies/wpcf_extension";
+@use 'elements/buttons';
+// Dependencies
+@use 'dependencies/swiper_defaults';
+@use 'dependencies/wpcf_extension';
 // [1] Global Parts //
-@use "global-parts/header/header_main";
-@use "global-parts/header/header_mobile_menu";
-@use "global-parts/footer/footer_main";
-@use "global-parts/wrappers/columned_wraps";
-@use "global-parts/states/loader";
+@use 'sections/header/header_main';
+@use 'sections/header/header_mobile_menu';
+@use 'sections/footer/footer_main';
+
 // [2] Template Parts //
-@use "template-parts/pages/default_content";
-  // Cards //
-  @use "template-parts/cards/article";
+@use 'pages/default_content';
+// Cards //
+@use 'cards/article';
 // [3] Elements //
-@use "elements/tabbed_content";
-@use "elements/accordion";
-@use "elements/pagination";
+@use 'elements/loader';
+@use 'elements/tabbed_content';
+@use 'elements/accordion';
+@use 'elements/pagination';
+
+// @use "global-parts/wrappers/columned_wraps";

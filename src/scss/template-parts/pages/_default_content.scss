@@ -1,7 +1,0 @@
-@use './../../utils/mixins' as *;
-.base-master-default-content-cst {
-  padding: 5rem 0;
-  &__inner {
-    @include flex(column, nowrap, flex-start, flex-start, 1rem);
-  }
-}
