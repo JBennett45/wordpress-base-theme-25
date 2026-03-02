@@ -1,5 +1,5 @@
 <h4>Example Accordion:</h4>
-<custom-accordion-el>
+<custom-accordion>
   <div class="jb-custom-accordion-cst">
     <?php for ($i = 0; $i < 3; $i++) { ?>
       <div class="jb-custom-accordion-cst__item" <?php echo ($i == 0) ? 'data-status="active"' : ''; ?>>
@@ -12,4 +12,4 @@
       </div>
     <?php } ?>
   </div>
-</custom-accordion-el>
+</custom-accordion>
