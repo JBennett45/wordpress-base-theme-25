@@ -1,7 +1,7 @@
-@use "./../../utils/mixins" as *;
-#mbl-menu-ovrr-wrapp {
+@use './../../utils/mixins' as *;
+#mobile-menu-overlay-cst {
   position: fixed;
-  z-index:50;
+  z-index: 50;
   background-color: var(--dark-project-primary);
   top: 75px; // or change to your header height //
   left: 0;
@@ -12,7 +12,7 @@
   transition: 0.5s all;
   overflow: hidden;
   .mbl-menu-ovrr-inner-wrapp {
-    height:100%;
+    height: 100%;
     overflow-x: scroll;
     @include remove-scrollbars();
     nav {
@@ -24,9 +24,9 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            height:100%; 
-            width:100%;
-            padding:10px 15px; 
+            height: 100%;
+            width: 100%;
+            padding: 10px 15px;
             // styling //
             text-decoration: none;
             font-weight: 700;
@@ -35,21 +35,22 @@
           // dropdown //
           .sub-menu {
             display: none;
-            padding-left:15px;
-            margin-bottom: 5px;;
+            padding-left: 15px;
+            margin-bottom: 5px;
           }
           // Drodown chevs //
           .bst-opt-chevron-active-cst {
             display: none;
             align-items: center;
             justify-content: center;
-            height:100%;
+            height: 100%;
             margin: 0 0 0 15px;
-            padding:10px;
+            padding: 10px;
             position: relative;
             transition: 0.3s all;
             svg {
-              width:12px; height:12px;
+              width: 12px;
+              height: 12px;
             }
           }
           // State - Mobile DROPDOWN is active //
@@ -74,7 +75,7 @@
               li {
                 // prevent further, only support three tier //
                 .bst-opt-chevron-active-cst {
-                  display: none; 
+                  display: none;
                 }
               }
             }
@@ -95,7 +96,7 @@
     opacity: 1;
     visibility: visible;
   }
-  // no show on desktop or whatever breakpoint you want the hamburger to come into touch // 
+  // no show on desktop or whatever breakpoint you want the hamburger to come into touch //
   @media only screen and (min-width: 998px) {
     display: none;
   }

@@ -4,6 +4,7 @@ import 'swiper/css/bundle';
 // Dependency //
 import './dependencies/_wpcfExtension';
 // Core //
+import './core/_mobileToggle';
 import './core/_mobileNavigation';
 // Elements //
 import './elements/_loadAndFilterPosts';

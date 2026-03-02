@@ -31,11 +31,11 @@
     <div class="hdr-container-cst__menu--wrap">
       <?php jbcst_wp_return_wpmenu('Header Menu', 'hdr-optional-class', true); ?>
     </div>
-    <div class="mbl-toggle-wrapp">
+    <mobile-toggle class="mobile-toggle-cst">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </mobile-toggle>
   </div>
 </header>
 <main id="main-content-wrap-cst">
