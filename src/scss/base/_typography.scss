@@ -1,95 +1,86 @@
 $font-pathway: '../fonts/montserrat/';
 @font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: light;
-  font-weight: 300;
-  src: url($font-pathway + 'montserrat-light.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url($font-pathway + 'montserrat-light.ttf' ) format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+	font-display: swap;
+	font-family: 'Montserrat';
+	font-style: light;
+	font-weight: 300;
+	src:
+		url($font-pathway + 'montserrat-light.woff2') format('woff2'),
+		/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+			url($font-pathway + 'montserrat-light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 @font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url($font-pathway + 'montserrat-regular.woff2') format('woff2'), 
-       url($font-pathway + 'montserrat-regular.ttf' ) format('truetype');
+	font-display: swap;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url($font-pathway + 'montserrat-regular.woff2') format('woff2'),
+		url($font-pathway + 'montserrat-regular.ttf') format('truetype');
 }
 @font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: bold;
-  font-weight: 700;
-  src: url($font-pathway + 'montserrat-bold.woff2') format('woff2'), 
-       url($font-pathway + 'montserrat-bold.ttf' ) format('truetype'); 
+	font-display: swap;
+	font-family: 'Montserrat';
+	font-style: bold;
+	font-weight: 700;
+	src:
+		url($font-pathway + 'montserrat-bold.woff2') format('woff2'),
+		url($font-pathway + 'montserrat-bold.ttf') format('truetype');
 }
-// Declare font after install 
-$font-declaration: "Montserrat", Helvetica, Arial, sans-serif;
+// Declare font after install
+$font-declaration: 'Montserrat', Helvetica, Arial, sans-serif;
 
 body {
-  font-family: $font-declaration;
+	font-family: $font-declaration;
 }
-h1,h2,h3,h4,h5,h6 {
-  margin: 1rem 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 1rem 0;
 }
 h1 {
-  font-size: 3.5rem;
-  line-height: 4.5rem;
+	font-size: var(--font-size-xxl);
 }
 h2 {
-  font-size: 3rem;
-  line-height: 4rem;
+	font-size: var(--font-size-xl);
 }
 h3 {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+	font-size: var(--font-size-lg);
 }
 h4 {
-  font-size: 2rem;
-  line-height: 3rem;
+	font-size: var(--font-size-md);
 }
 h5 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+	font-size: var(--font-size-md);
 }
 h6 {
-  font-size: 1rem;
-  line-height: 2rem;
+	font-size: var(--font-size-sm);
 }
-p {
-  font-size:1rem;
-  line-height: 2rem;
-}
-p {
-  font-size:1.6rem;
-  margin-bottom: 1.5rem;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-strong {
-  font-weight: 700;
-}
+
 #main-cst-theme-wrapp-cst {
 	overflow-x: hidden;
 	position: relative;
-  ul {
-    padding: 15px 0;
-    margin-left: 15px;
-    li {
-      list-style-type: none;
-      padding-left: 20px;
-      position: relative;
-      margin-bottom: 15px;
-      &:before {
-        content: '>';
-        position: absolute;
-        top:0;left:0;
-        font-size:16px;
-      }
-      &:last-child {
-        margin-bottom:0;
-      }
-    }
-  }
+	ul {
+		padding: 15px 0;
+		margin-left: 15px;
+		li {
+			list-style-type: none;
+			padding-left: 20px;
+			position: relative;
+			margin-bottom: 15px;
+			&:before {
+				content: '>';
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 16px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
