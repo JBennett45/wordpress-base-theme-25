@@ -8,6 +8,7 @@ import './core/_mobileToggle';
 import './core/_mobileNavigation';
 // Elements //
 import './elements/_loadAndFilterPosts';
+import './elements/_tabbedContent';
 import './elements/_tabs';
 import './elements/_accordion';
 // Sections //

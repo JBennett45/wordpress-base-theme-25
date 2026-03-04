@@ -9,7 +9,7 @@ $show_tabs = get_field('show_tabbed_example');
 <section class="base-master-default-content-cst">
   <div class="container-cst base-master-default-content-cst__inner" data-contain="yes">
     <h2>Basic Development Theme</h2>
-    <p>A minimal starter theme with Vite processing and basic UI elements to be built on.</p>
+    <p>A minimal starter theme with Vite and basic UI elements to be built on.</p>
     <h5>Current template: <?php echo $file; ?></h5>
     <?php 
       if(is_singular('post')) { 
