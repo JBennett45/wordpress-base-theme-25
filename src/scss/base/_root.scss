@@ -1,36 +1,41 @@
 :root {
-  /* Container */
-  --container-max: 1600px;
-  --desktop-padding: 3rem;
-  --mobile-padding: 2rem;
-  /* Font Sizes */
-  --body-origin: 10px;
-  --font-standard: 1.6rem;
-  /* Colours */
-  --project-primary: #111d4a;
-  --dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);
-  --light-project-primary: lch(from var(--project-primary) calc(l + 20) c h);
-  --highlight-project-primary: lch(
-    from var(--project-primary) calc(l + 50) c h
-  );
-  --white: #ffffff;
-  --light-grey: #eeeeee;
-  --black: #000000;
-  /* Alerts */
-  --alert-success: #5cb85c;
-  --alert-warning: #ff9966;
-  --alert-error: #d0342c;
-  /* Buttons */
-  --btn-font-size: 1.4rem;
-  --btn-radius-sm: 10px;
-  --btn-radius-lg: 20px;
-  --btn-height-sm: 40px;
-  --btn-height-lg: 60px;
-  /* Radius */
-  --border-radius-xs: 0.8rem;
-  --border-radius-sm: 1.2rem;
-  --border-radius-md: 1.5rem;
-  --border-radius-lg: 2rem;
-  /* Misc */
-  --transition-speed: 0.25s;
+	/* Container */
+	--container-max: 1600px;
+	--desktop-padding: 3rem;
+	--mobile-padding: 2rem;
+	/* Font Sizes */
+	--body-origin: 10px;
+	--font-standard: 1.6rem;
+	--font-size-sm: var(--font-standard);
+	--font-size-md: calc(var(--font-standard) + 1rem);
+	--font-size-lg: calc(var(--font-standard) + 1.5rem);
+	--font-size-xl: calc(var(--font-standard) + 2rem);
+	--font-size-xxl: calc(var(--font-standard) + 2.5rem);
+	/* Colours */
+	--project-primary: #111d4a;
+	--dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);
+	--light-project-primary: lch(from var(--project-primary) calc(l + 20) c h);
+	--highlight-project-primary: lch(
+		from var(--project-primary) calc(l + 50) c h
+	);
+	--white: #ffffff;
+	--light-grey: #eeeeee;
+	--black: #000000;
+	/* Alerts */
+	--alert-success: #5cb85c;
+	--alert-warning: #ff9966;
+	--alert-error: #d0342c;
+	/* Buttons */
+	--btn-font-size: 1.4rem;
+	--btn-radius-sm: 10px;
+	--btn-radius-lg: 20px;
+	--btn-height-sm: 40px;
+	--btn-height-lg: 60px;
+	/* Radius */
+	--border-radius-xs: 0.8rem;
+	--border-radius-sm: 1.2rem;
+	--border-radius-md: 1.5rem;
+	--border-radius-lg: 2rem;
+	/* Misc */
+	--transition-speed: 0.25s;
 }
