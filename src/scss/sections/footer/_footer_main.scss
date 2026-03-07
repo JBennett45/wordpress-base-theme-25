@@ -1,21 +1,30 @@
 @use './../../utils/mixins' as *;
 .basetheme-footer-cst {
-	border-top: 10px solid var(--project-primary);
-	padding: 25px 0;
+	border-top: 0.5rem solid var(--project-primary);
+	padding: 3rem 0;
 	&__inner {
-		@include flex(column, wrap, flex-start, flex-start, 1rem);
+		@include flex(column, nowrap, flex-start, flex-start, 2rem);
+	}
+	&__logo {
+		text-align: center;
+		width: 100%;
+		h4 {
+			font-size: var(--font-size-xl);
+		}
 	}
 	&__menu {
 		width: 100%;
 		ul {
 			list-style-type: none;
 			font-size: var(--font-size-sm);
+			@include flex(row, wrap, center, flex-start, 1rem);
 		}
 	}
 	&__terms {
+		max-width: 70rem;
 		width: 100%;
-		border-top: 1px solid var(--project-primary);
-		padding-block: 2rem;
-		font-size: 1rem;
+		margin: 0 auto;
+		text-align: center;
+		font-size: var(--font-size-xs);
 	}
 }
