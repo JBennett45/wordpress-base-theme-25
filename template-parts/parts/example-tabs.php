@@ -1,19 +1,20 @@
 <h4>Example Tabbed Content</h4>
-<custom-tabs>
-  <div class="jb-custom-tabs-cst">
-    <div class="jb-custom-tabs-title-cst">
-      <?php for ($i = 0; $i < 3; $i++) { ?>
-        <div class="jb-custom-tabs-title-cst__item <?php echo ($i == 0) ? 'jb-custom-tabs-title-cst__item--active' : ''; ?>" data-target="<?php echo $i; ?>">
-          Tab Title <?php echo $i; ?>
-        </div>
-      <?php } ?>
+<custom-tabs class="custom-tabs-wrap">
+  <div class="custom-tabs-wrap__titles">
+    <?php for ($i = 0; $i < 3; $i++) { ?>
+    <div class="custom-tabs-wrap__title-tab" data-target="<?php echo $i; ?>"
+      <?php echo ($i == 0) ? 'data-active="true"' : ''; ?>>
+      Tab Title <?php echo $i; ?>
     </div>
-    <div class="jb-custom-tabs-content-cst">
-      <?php for ($i = 0; $i < 3; $i++) { ?>
-        <div class="jb-custom-tabs-content-cst__item <?php echo ($i == 0) ? 'jb-custom-tabs-content-cst__item--active' : ''; ?>" data-target="<?php echo $i; ?>">
-          <p>Content <?php echo $i; ?> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed ante a velit rutrum rhoncus ac in est. Nunc ultrices mauris lorem, quis dictum ex tempor eu. Morbi leo augue.</p>
-        </div>
-      <?php } ?>
+    <?php } ?>
+  </div>
+  <div class="custom-tabs-wrap__content">
+    <?php for ($i = 0; $i < 3; $i++) { ?>
+    <div class="custom-tabs-wrap__content-tab" data-target="<?php echo $i; ?>"
+      <?php echo ($i == 0) ? 'data-active="true"' : ''; ?>>
+      <p>Content <?php echo $i; ?> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed ante a velit
+        rutrum rhoncus ac in est. Nunc ultrices mauris lorem, quis dictum ex tempor eu. Morbi leo augue.</p>
     </div>
+    <?php } ?>
   </div>
 </custom-tabs>

@@ -1,27 +1,43 @@
-.jb-custom-tabs-cst {
-  // Title | tabs //
-  .jb-custom-tabs-title-cst {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    &__item {
-      border: 4px solid blue;
-      &--active {
-        border-color: green;
-      }
-    }
-  }
-  .jb-custom-tabs-content-cst {
-    overflow: hidden;
-    &__item {
-      opacity: 0;
-      height: 0;
-      visibility: hidden;
-      transition: all 0.25s;
-      &--active {
-        opacity: 1;
-        height: auto;
-        visibility: visible;
-      }
-    }
-  }
+@use './../utils/mixins' as *;
+.custom-tabs-wrap {
+	&__titles {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	&__title-tab {
+		padding: var(--padding-md);
+		background-color: var(--light-grey);
+		border: 1px solid var(--white);
+		text-align: left;
+		cursor: pointer;
+		&[data-active='true'] {
+			font-weight: var(--font-weight-bold);
+		}
+	}
+	&__content {
+		overflow: hidden;
+	}
+	&__content-tab {
+		opacity: 0;
+		height: 0;
+		visibility: hidden;
+		transition: opacity var(--transition-speed);
+		padding-block: 0;
+		&[data-active='true'] {
+			opacity: 1;
+			height: auto;
+			visibility: visible;
+			padding-block: var(--padding-lg);
+		}
+	}
+}
+@include breakpoint('sm') {
+	.custom-tabs-wrap {
+		&__titles {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&__title-tab {
+			text-align: center;
+		}
+	}
 }

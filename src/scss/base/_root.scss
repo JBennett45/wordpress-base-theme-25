@@ -11,6 +11,9 @@
 	--font-size-lg: calc(var(--font-standard) + 1.5rem);
 	--font-size-xl: calc(var(--font-standard) + 2rem);
 	--font-size-xxl: calc(var(--font-standard) + 2.5rem);
+	/* Weight */
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
 	/* Colours */
 	--project-primary: #111d4a;
 	--dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);
@@ -36,6 +39,11 @@
 	--border-radius-sm: 1.2rem;
 	--border-radius-md: 1.5rem;
 	--border-radius-lg: 2rem;
+	/* Padding */
+	--padding-xs: 0.8rem;
+	--padding-sm: 1.2rem;
+	--padding-md: 1.5rem;
+	--padding-lg: 2rem;
 	/* Misc */
 	--transition-speed: 0.25s;
 }
