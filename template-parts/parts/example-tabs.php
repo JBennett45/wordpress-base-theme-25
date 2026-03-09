@@ -1,4 +1,3 @@
-<h4>Example Tabbed Content</h4>
 <custom-tabs class="custom-tabs-wrap">
   <div class="custom-tabs-wrap__titles">
     <?php for ($i = 0; $i < 3; $i++) { ?>

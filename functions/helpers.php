@@ -75,10 +75,8 @@ function jbcst_split_name_field($name) {
 }
 // CF7 Custom Element return // 
 function jbcst_cf7_element($formID) {
-  echo '<cf-form-extension>';
-    echo '<div class="wpcf-extension-wrap-cst">';
-        echo do_shortcode('[contact-form-7 id="'.$formID.'"]');
-    echo '</div>';
+  echo '<cf-form-extension class="wpcf-extension-wrap-cst">';
+    echo do_shortcode('[contact-form-7 id="'.$formID.'"]');
   echo '</cf-form-extension>';
 }
 ?>
