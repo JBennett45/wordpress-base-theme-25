@@ -6,6 +6,7 @@
 	/* Font Sizes */
 	--body-origin: 10px;
 	--font-standard: 1.6rem;
+	--font-size-xs: calc(var(--font-standard) - 0.3rem);
 	--font-size-sm: var(--font-standard);
 	--font-size-md: calc(var(--font-standard) + 1rem);
 	--font-size-lg: calc(var(--font-standard) + 1.5rem);
