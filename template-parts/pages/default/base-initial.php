@@ -20,13 +20,13 @@ if(function_exists('get_field')) {
           echo get_the_content();
         endwhile; 
       } 
-      if(isset($show_form)) {
+      if(!empty($show_form)) {
         get_template_part('template-parts/parts/example-form');
       }
-      if(isset($show_accordion)) {
+      if(!empty($show_accordion)) {
         get_template_part('template-parts/parts/example-accordion');
       }
-      if(isset($show_tabs)) {
+      if(!empty($show_tabs)) {
         get_template_part('template-parts/parts/example-tabs');
       }
     ?>

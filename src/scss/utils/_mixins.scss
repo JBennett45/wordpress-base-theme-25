@@ -3,64 +3,83 @@
 @use 'sass:string';
 // Breakpoints - setup //
 $breakpoints: (
-  'xs': 375px,
-  'sm': 768px,
-  'md': 1024px,
-  'lg': 1440px,
-  'xl': 1920px,
+	'xs': 375px,
+	'sm': 768px,
+	'md': 1024px,
+	'lg': 1440px,
+	'xl': 1920px,
 );
 // Breakpoints - used with - //
 @mixin breakpoint($size) {
-  $breakpoint: map.get($breakpoints, $size);
-  @if $breakpoint {
-    @media (min-width: $breakpoint) {
-      @content;
-    }
-  }
+	$breakpoint: map.get($breakpoints, $size);
+	@if $breakpoint {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
 }
 // Flex - used with -  @include flex(column, nowrap, center, center, 1rem);
 @mixin flex(
-  $direction: row,
-  $wrap: nowrap,
-  $justify: flex-start,
-  $align: stretch,
-  $gap: 0
+	$direction: row,
+	$wrap: nowrap,
+	$justify: flex-start,
+	$align: stretch,
+	$gap: 0
 ) {
-  display: flex;
-  flex-flow: $direction $wrap;
-  justify-content: $justify;
-  align-items: $align;
-  gap: $gap;
+	display: flex;
+	flex-flow: $direction $wrap;
+	justify-content: $justify;
+	align-items: $align;
+	gap: $gap;
 }
 
 // Remove Scrollbars - used with - @include remove-scrollbars() //
 @mixin remove-scrollbars() {
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 // Image Stretch - used with - @include strech-img()  //
 @mixin strech-img() {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 // Resuable Font - used with -  used with - @include responsive-font(1.4, 1.6, 1.6) //
 @mixin responsive-font($mobile: 1.4, $tablet: 1.6, $desktop: 1.6) {
-  font-size: $mobile + rem;
-  line-height: calc($mobile + 1) + rem;
-  @media only screen and (min-width: 768px) {
-    font-size: $tablet + rem;
-    line-height: calc($tablet + 1) + rem;
-  }
-  @media only screen and (min-width: 1024px) {
-    font-size: $desktop + rem;
-    line-height: calc($desktop + 1) + rem;
-  }
+	font-size: $mobile + rem;
+	line-height: calc($mobile + 1) + rem;
+	@media only screen and (min-width: 768px) {
+		font-size: $tablet + rem;
+		line-height: calc($tablet + 1) + rem;
+	}
+	@media only screen and (min-width: 1024px) {
+		font-size: $desktop + rem;
+		line-height: calc($desktop + 1) + rem;
+	}
+}
+// Menu divider //
+@mixin horizontalMenuDivider() {
+	position: relative;
+	padding: 0 1rem 0 0;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1px;
+		height: 100%;
+		background-color: var(--project-primary);
+	}
+	&:last-child {
+		&:after {
+			display: none;
+		}
+	}
 }

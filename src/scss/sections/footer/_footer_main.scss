@@ -18,6 +18,9 @@
 			list-style-type: none;
 			font-size: var(--font-size-sm);
 			@include flex(row, wrap, center, flex-start, 1rem);
+			li {
+				@include horizontalMenuDivider();
+			}
 		}
 	}
 	&__terms {
