@@ -2,9 +2,11 @@
 // vars //
 global $template;
 $file = basename($template);
-$show_form = get_field('show_form_example');
-$show_accordion = get_field('show_accordion_example');
-$show_tabs = get_field('show_tabbed_example');
+if(function_exists('get_field')) { 
+  $show_form = get_field('show_form_example');
+  $show_accordion = get_field('show_accordion_example');
+  $show_tabs = get_field('show_tabbed_example');
+}
 ?>
 <section class="base-master-default-content-cst">
   <div class="container-cst base-master-default-content-cst__inner" data-contain="yes">
@@ -18,13 +20,13 @@ $show_tabs = get_field('show_tabbed_example');
           echo get_the_content();
         endwhile; 
       } 
-      if($show_form) {
+      if(isset($show_form)) {
         get_template_part('template-parts/parts/example-form');
       }
-      if($show_accordion) {
+      if(isset($show_accordion)) {
         get_template_part('template-parts/parts/example-accordion');
       }
-      if($show_tabs) {
+      if(isset($show_tabs)) {
         get_template_part('template-parts/parts/example-tabs');
       }
     ?>

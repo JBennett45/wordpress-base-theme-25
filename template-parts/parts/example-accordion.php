@@ -1,4 +1,3 @@
-<h4>Example Accordion</h4>
 <custom-accordion>
   <div class="jb-custom-accordion-cst">
     <?php for ($i = 0; $i < 3; $i++) { ?>
