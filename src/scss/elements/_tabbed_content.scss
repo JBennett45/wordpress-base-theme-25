@@ -1,5 +1,6 @@
 @use './../utils/mixins' as *;
 .custom-tabs-wrap {
+	width: 100%;
 	&__titles {
 		display: grid;
 		grid-template-columns: 1fr;

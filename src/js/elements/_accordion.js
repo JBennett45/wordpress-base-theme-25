@@ -1,7 +1,7 @@
 class CustomAccordionElement extends HTMLElement {
 	constructor() {
 		super();
-		this.accordion_instance = this.querySelector('.jb-custom-accordion-cst');
+		this.accordion_instance = this;
 		this.accordion_item = this.querySelector('.jb-custom-accordion-cst__item');
 	}
 
