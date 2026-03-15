@@ -44,3 +44,4 @@
     </div>
   </header>
   <main id="main-content-wrap-cst">
+    <?php echo get_template_part('template-parts/banners/banner-swiper'); ?>
