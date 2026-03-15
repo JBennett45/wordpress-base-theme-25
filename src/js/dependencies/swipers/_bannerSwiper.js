@@ -1,12 +1,24 @@
 import Swiper from 'swiper/bundle';
+import { Navigation, A11y, Mousewheel } from 'swiper/modules';
 class BannerSwiperSetup extends HTMLElement {
 	constructor() {
 		super();
-		this.swiper = this;
-	}
-
-	connectedCallback() {
-		console.log(this.swiper);
+		this.swiperElement = this.querySelector('.swiper');
+		this.swiper = new Swiper(this.swiperElement, {
+			modules: [A11y, Navigation, Mousewheel],
+			slidesPerView: 1,
+			spaceBetween: 25,
+			loop: true,
+			centeredSlides: true,
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// },
+			// mousewheel: {
+			// 	enabled: true,
+			// 	forceToAxis: true,
+			// },
+		});
 	}
 }
 customElements.define('banner-swiper', BannerSwiperSetup);
