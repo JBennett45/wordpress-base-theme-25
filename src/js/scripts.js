@@ -11,5 +11,5 @@ import './elements/_loadAndFilterPosts';
 import './elements/_tabbedContent';
 import './elements/_tabs';
 import './elements/_accordion';
-// Sections //
-// import './sections/_bannerSlider';
+// Swipers //
+import './dependencies/swipers/_bannerSwiper';
