@@ -1,5 +1,8 @@
 @use './../../utils/mixins' as *;
 .banner-swiper-cst {
+	.outer-wrap {
+		padding-block: var(--padding-lg);
+	}
 	.swiper {
 		width: calc(100% - 75px);
 		overflow: visible;
