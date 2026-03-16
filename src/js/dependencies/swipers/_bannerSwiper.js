@@ -7,7 +7,7 @@ class BannerSwiperSetup extends HTMLElement {
 		this.swiper = new Swiper(this.swiperElement, {
 			modules: [A11y, Navigation, Mousewheel],
 			slidesPerView: 1,
-			spaceBetween: 25,
+			spaceBetween: 20,
 			loop: true,
 			centeredSlides: true,
 			// navigation: {

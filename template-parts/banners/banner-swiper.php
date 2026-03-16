@@ -1,8 +1,6 @@
-<banner-swiper>
-
-  <!-- Slider main container -->
+<banner-swiper class="banner-swiper-cst">
   <div class="swiper">
-    <!-- Additional required wrapper -->
+
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide">Slide 1</div>
@@ -22,19 +20,4 @@
     <!-- If we need scrollbar -->
     <div class="swiper-scrollbar"></div>
   </div>
-
 </banner-swiper>
-
-<style>
-.swiper {
-  width: calc(100% - 150px);
-  overflow: visible;
-  margin: 0 auto;
-}
-
-.swiper-slide {
-  border: 2px solid red;
-  padding: 10rem 2rem;
-  text-align: center;
-}
-</style>

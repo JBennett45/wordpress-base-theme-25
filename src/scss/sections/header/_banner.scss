@@ -1,0 +1,26 @@
+@use './../../utils/mixins' as *;
+.banner-swiper-cst {
+	.swiper {
+		width: calc(100% - 75px);
+		overflow: visible;
+		margin: 0 auto;
+	}
+	.swiper-slide {
+		background: var(--dark-project-primary);
+		color: var(--white);
+		padding: 10rem 2rem;
+		text-align: center;
+		opacity: 0.5;
+		transition: all var(--transition-speed);
+	}
+	.swiper-slide-active {
+		opacity: 1;
+	}
+	@include breakpoint('sm') {
+		.swiper {
+			width: calc(100% - 200px);
+			overflow: visible;
+			margin: 0 auto;
+		}
+	}
+}

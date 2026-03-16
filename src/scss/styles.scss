@@ -11,8 +11,8 @@
 // [1] Global Parts //
 @use 'sections/header/header_main';
 @use 'sections/header/header_mobile_menu';
+@use 'sections/header/banner';
 @use 'sections/footer/footer_main';
-
 // [2] Template Parts //
 @use 'pages/default_content';
 // Cards //
@@ -22,5 +22,3 @@
 @use 'elements/tabbed_content';
 @use 'elements/accordion';
 @use 'elements/pagination';
-
-// @use "global-parts/wrappers/columned_wraps";
