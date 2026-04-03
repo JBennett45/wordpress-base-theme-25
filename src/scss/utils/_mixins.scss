@@ -3,7 +3,8 @@
 @use 'sass:string';
 // Breakpoints - setup //
 $breakpoints: (
-	'xs': 375px,
+	'xxs': 375px,
+	'xs': 520px,
 	'sm': 768px,
 	'md': 1024px,
 	'lg': 1440px,
