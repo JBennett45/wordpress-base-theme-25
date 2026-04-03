@@ -51,6 +51,7 @@ class PostTypeLoadAndFilter extends HTMLElement {
 				this.btn_load_more.disabled = false;
 				this.btn_load_more.innerHTML = '<span>Load more</span>';
 				this.dataset.paged = res.paged;
+				this.page = this.dataset.paged;
 				this.checkPagedStatus();
 				filteringLoadState(this.post_wrapper, 'end');
 			} else {
@@ -92,7 +93,6 @@ class PostTypeLoadAndFilter extends HTMLElement {
 			const res = await postsCallBack.json();
 
 			if (res.success === 1) {
-				console.log(res);
 				this.post_wrapper.innerHTML = res.output;
 				this.dataset.queryvars = res.new_query;
 				this.dataset.paged = res.new_current_page;

@@ -45,6 +45,13 @@
 	--padding-sm: 1.2rem;
 	--padding-md: 1.5rem;
 	--padding-lg: 2rem;
+	/* z-index */
+	--z-index-nil: 0;
+	--z-index-xs: 2;
+	--z-index-sm: 5;
+	--z-index-md: 10;
+	--z-index-lg: 99;
+	--z-index-xl: 999;
 	/* Misc */
 	--transition-speed: 0.25s;
 }
