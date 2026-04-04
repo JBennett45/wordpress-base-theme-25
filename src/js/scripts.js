@@ -9,7 +9,6 @@ import './core/_mobileNavigation';
 // Elements //
 import './elements/_loadAndFilterPosts';
 import './elements/_tabbedContent';
-import './elements/_tabs';
 import './elements/_accordion';
 // Swipers //
 import './dependencies/swipers/_bannerSwiper';
