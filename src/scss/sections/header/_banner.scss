@@ -2,6 +2,7 @@
 .banner-swiper-cst {
 	.outer-wrap {
 		padding-block: var(--padding-lg);
+		background-color: var(--light-grey);
 	}
 	.swiper {
 		width: calc(100% - 75px);
@@ -13,8 +14,9 @@
 		color: var(--white);
 		padding: 10rem 2rem;
 		text-align: center;
-		opacity: 0.5;
+		opacity: 0.75;
 		transition: all var(--transition-speed);
+		cursor: pointer;
 	}
 	.swiper-slide-active {
 		opacity: 1;
@@ -24,6 +26,9 @@
 			width: calc(100% - 200px);
 			overflow: visible;
 			margin: 0 auto;
+		}
+		.swiper-slide {
+			padding: 20rem 2rem;
 		}
 	}
 }
