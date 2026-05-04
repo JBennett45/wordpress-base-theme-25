@@ -1,5 +1,6 @@
 @use './../../utils/mixins' as *;
 .banner-swiper-cst {
+	position: relative;
 	.outer-wrap {
 		padding-block: var(--padding-lg);
 		background-color: var(--light-grey);
@@ -21,11 +22,22 @@
 	.swiper-slide-active {
 		opacity: 1;
 	}
+	&__navigation {
+		@include flex(row, wrap, space-between, center, 0);
+		position: absolute;
+		top: calc(50% - var(--font-size-md));
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: calc(100% - 3rem);
+		z-index: var(--z-index-lg);
+		color: var(--white);
+		font-size: var(--font-size-md);
+		font-weight: var(--font-weight-bold);
+	}
 	@include breakpoint('sm') {
 		.swiper {
 			width: calc(100% - 200px);
-			overflow: visible;
-			margin: 0 auto;
 		}
 		.swiper-slide {
 			padding: 20rem 2rem;

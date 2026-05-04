@@ -12,8 +12,10 @@
 
       <div class="swiper-pagination"></div>
 
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="banner-swiper-cst__navigation">
+        <div class="banner-swiper-cst__prev"><</div>
+        <div class="banner-swiper-cst__next">></div>
+      </div>
 
     </div>
   </div>
