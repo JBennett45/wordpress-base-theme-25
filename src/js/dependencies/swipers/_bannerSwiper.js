@@ -10,10 +10,10 @@ class BannerSwiperSetup extends HTMLElement {
 			spaceBetween: 20,
 			loop: true,
 			centeredSlides: true,
-			// navigation: {
-			// 	nextEl: '.swiper-button-next',
-			// 	prevEl: '.swiper-button-prev',
-			// },
+			navigation: {
+				nextEl: '.banner-swiper-cst__next',
+				prevEl: '.banner-swiper-cst__prev',
+			},
 			// mousewheel: {
 			// 	enabled: true,
 			// 	forceToAxis: true,
