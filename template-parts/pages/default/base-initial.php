@@ -21,13 +21,13 @@ if(function_exists('get_field')) {
         endwhile; 
       } 
       if(!empty($show_form)) {
-        get_template_part('template-parts/parts/example-form');
+        get_template_part('template-parts/sections/example-form');
       }
       if(!empty($show_accordion)) {
-        get_template_part('template-parts/parts/example-accordion');
+        get_template_part('template-parts/sections/example-accordion');
       }
       if(!empty($show_tabs)) {
-        get_template_part('template-parts/parts/example-tabs');
+        get_template_part('template-parts/sections/example-tabs');
       }
     ?>
   </div>
