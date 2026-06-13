@@ -16,10 +16,10 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   /* Colours */
-  --project-primary: #111d4a;
-  --dark-project-primary: lch(from var(--project-primary) calc(l - 20) c h);
-  --light-project-primary: lch(from var(--project-primary) calc(l + 20) c h);
-  --highlight-project-primary: lch(from var(--project-primary) calc(l + 50) c h);
+  --core-blue: #111d4a;
+  --dark-core-blue: lch(from var(--core-blue) calc(l - 20) c h);
+  --light-core-blue: lch(from var(--core-blue) calc(l + 20) c h);
+  --highlight-core-blue: lch(from var(--core-blue) calc(l + 50) c h);
   --white: #ffffff;
   --light-grey: #eeeeee;
   --black: #000000;
@@ -43,6 +43,11 @@
   --padding-sm: 1.2rem;
   --padding-md: 1.5rem;
   --padding-lg: 2rem;
+  /* Gaps */
+  --gap-xs: 0.8rem;
+  --gap-sm: 1.2rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 2rem;
   /* z-index */
   --z-index-nil: 0;
   --z-index-xs: 2;

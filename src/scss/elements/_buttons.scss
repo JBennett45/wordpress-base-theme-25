@@ -1,6 +1,6 @@
 @use './../utils/mixins' as *;
 .button-cst {
-  border: 2px solid var(--project-primary);
+  border: 2px solid var(--core-blue);
   border-radius: var(--btn-radius-sm);
   transition: all var(--transition-speed);
   height: var(--btn-height-sm);
@@ -39,7 +39,7 @@
     &:hover {
       span {
         &:after {
-          background-color: var(--highlight-project-primary);
+          background-color: var(--highlight-core-blue);
           translate: 0.25rem 0;
         }
       }
@@ -47,12 +47,12 @@
   }
   // Orange Colour Modifier //
   &--primary {
-    background-color: var(--project-primary);
+    background-color: var(--core-blue);
     span {
       color: var(--white);
     }
     &:hover {
-      background-color: var(--dark-project-primary);
+      background-color: var(--dark-core-blue);
     }
   }
 }
