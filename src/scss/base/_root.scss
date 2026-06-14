@@ -1,10 +1,11 @@
 :root {
+  /* Global */
+  --body-origin: 10px;
   /* Container */
-  --container-max: 1600px;
+  --container-max: 122rem;
   --desktop-padding: 3rem;
   --mobile-padding: 2rem;
   /* Font Sizes */
-  --body-origin: 10px;
   --font-standard: 1.6rem;
   --font-size-xs: calc(var(--font-standard) - 0.3rem);
   --font-size-sm: var(--font-standard);

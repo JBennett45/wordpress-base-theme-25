@@ -1,6 +1,6 @@
 </main>
 <footer id="base-master-fttr-cst" class="basetheme-footer-cst">
-  <div class="container-cst basetheme-footer-cst__inner" data-contain="yes">
+  <div class="container-cst basetheme-footer-cst__inner">
     <div class="basetheme-footer-cst__logo">
       <h4>Logo</h4>
     </div>
