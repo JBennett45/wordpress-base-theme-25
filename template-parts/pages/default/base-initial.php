@@ -9,7 +9,7 @@ if(function_exists('get_field')) {
 }
 ?>
 <section class="base-master-default-content-cst">
-  <div class="container-cst base-master-default-content-cst__inner" data-contain="yes">
+  <div class="container-cst base-master-default-content-cst__inner">
     <h2>Basic Development Theme</h2>
     <p>A minimal starter theme with Vite and basic UI elements to be built on.</p>
     <h5>Current template: <?php echo $file; ?></h5>
