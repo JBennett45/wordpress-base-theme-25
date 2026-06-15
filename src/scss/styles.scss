@@ -9,14 +9,15 @@
 @use 'dependencies/swiper_defaults';
 @use 'dependencies/wpcf_extension';
 // [1] Global Parts //
-@use 'sections/header/header_main';
-@use 'sections/header/header_mobile_menu';
-@use 'sections/header/banner';
-@use 'sections/footer/footer_main';
+@use 'sections/header';
+@use 'sections/banner';
+@use 'sections/footer';
 // [2] Template Parts //
 @use 'pages/default_content';
 // Cards //
 @use 'cards/article';
+// Overlays //
+@use 'overlays/mobile_menu';
 // [3] Elements //
 @use 'elements/loader';
 @use 'elements/tabbed_content';

@@ -1,7 +1,7 @@
-@use './../../utils/mixins' as *;
-.basetheme-footer-cst {
-  border-top: 0.5rem solid var(--core-blue);
-  padding: 3rem 0;
+@use './../utils/mixins' as *;
+.footer-cst {
+  border-top: 1rem solid var(--core-blue);
+  padding: 5rem 0;
   &__inner {
     @include flex(column, nowrap, flex-start, flex-start, 2rem);
   }

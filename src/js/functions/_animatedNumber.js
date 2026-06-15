@@ -1,33 +1,67 @@
-// Animation Function //
-function animateNumberFromZero(obj, start, end, duration) {
-  let startTimestamp = null;
-  const step = (timestamp) => {
-    if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    obj.innerHTML = Math.floor(progress * (end - start) + start);
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
+class AnimatedNumber extends HTMLElement {
+  constructor() {
+    super()
+    this.observer = null
+    this.handleIntersect = this.handleIntersect.bind(this)
+  }
+
+  connectedCallback() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
     }
-  };
-  window.requestAnimationFrame(step);
-}
-const section_observe_options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.3,
-};
-// Observer //
-const class_to_observe = ".animated-number-jcst";
-const callback = (entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.classList.contains("animation-completed")) {
-      let number_entry = entry.target;
-      let nunber_end = number_entry.innerHTML;
-      number_entry.classList.add("animation-completed");
-      animateNumberFromZero(number_entry, 0, nunber_end, 1750);
+
+    this.observer = new IntersectionObserver(this.handleIntersect, options)
+    this.querySelectorAll('.animated-number-cst').forEach((element) => {
+      this.observer.observe(element)
+    })
+  }
+
+  disconnectedCallback() {
+    if (this.observer) {
+      this.observer.disconnect()
+      this.observer = null
     }
-  })
+  }
+
+  handleIntersect(entries) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return
+      }
+
+      const numberEntry = entry.target
+      if (numberEntry.classList.contains('animation-completed')) {
+        return
+      }
+
+      const endValue = parseInt(numberEntry.textContent.trim(), 10)
+      if (Number.isNaN(endValue)) {
+        numberEntry.classList.add('animation-completed')
+        return
+      }
+
+      numberEntry.classList.add('animation-completed')
+      this.animateNumberFromZero(numberEntry, 0, endValue, 1750)
+    })
+  }
+
+  animateNumberFromZero(obj, start, end, duration) {
+    let startTimestamp = null
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+      obj.innerHTML = Math.floor(progress * (end - start) + start)
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }
 }
-const observer = new IntersectionObserver(callback, section_observe_options);
-const animatedElements = document.querySelectorAll(class_to_observe);
-animatedElements.forEach(element => observer.observe(element));
+
+customElements.define('animated-number', AnimatedNumber)

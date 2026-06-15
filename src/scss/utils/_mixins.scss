@@ -36,6 +36,10 @@ $breakpoints: (
     display: none;
   }
 }
+// Max width asset //
+@mixin max-image() {
+  max-width: 100%;
+}
 // Image Stretch - used with - @include strech-img()  //
 @mixin strech-img() {
   position: absolute;

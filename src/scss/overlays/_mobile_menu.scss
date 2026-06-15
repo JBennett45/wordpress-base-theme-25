@@ -1,5 +1,5 @@
-@use './../../utils/mixins' as *;
-#mobile-menu-overlay-cst {
+@use './../utils/mixins' as *;
+.mobile-overlay-cst {
   position: fixed;
   z-index: 50;
   background-color: var(--dark-core-blue);
@@ -11,10 +11,12 @@
   visibility: hidden;
   transition: 0.5s all;
   overflow: hidden;
-  .mbl-menu-ovrr-inner-wrapp {
+
+  &__inner {
     height: 100%;
     overflow-x: scroll;
     @include remove-scrollbars();
+
     nav {
       ul {
         list-style-type: none;
@@ -91,13 +93,16 @@
       }
     }
   }
+
   // active //
-  &.activated-mbl-menu-ovrr-wrapp {
+  &--active {
     opacity: 1;
     visibility: visible;
   }
-  // no show on desktop or whatever breakpoint you want the hamburger to come into touch //
-  @media only screen and (min-width: 998px) {
+}
+
+@include breakpoint('md') {
+  .mobile-overlay-cst {
     display: none;
   }
 }

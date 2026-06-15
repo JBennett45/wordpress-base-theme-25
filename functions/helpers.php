@@ -79,4 +79,8 @@ function jbcst_cf7_element($formID) {
     echo do_shortcode('[contact-form-7 id="'.$formID.'"]');
   echo '</cf-form-extension>';
 }
+// Get an SVG from assets //
+function jbcst_assets_svg($file) {
+  echo file_get_contents( get_theme_file_path( 'assets/imgs/' . $file ) );
+}
 ?>
