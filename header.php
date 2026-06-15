@@ -27,16 +27,16 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <header id="global-header-cst" class="header-cst">
-    <div class="container-cst hdr-container-cst">
-      <div class="hdr-container-cst__logo--wrap">
+    <div class="container-cst header-cst__inner">
+      <div class="header-cst__logo">
         <a href="<?php echo get_home_url(); ?>">
-          <span>Logo</span>
+          <?php jbcst_assets_svg('logo.svg'); ?>
         </a>
       </div>
-      <div class="hdr-container-cst__menu--wrap">
+      <div class="header-cst__menu">
         <?php jbcst_wp_return_wpmenu('Header Menu', 'hdr-optional-class', true); ?>
       </div>
-      <mobile-toggle class="mobile-toggle-cst">
+      <mobile-toggle class="header-cst__toggle">
         <span></span>
         <span></span>
         <span></span>
