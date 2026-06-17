@@ -60,16 +60,22 @@ function jbcst_acf_return_img_field($img, $class = null) {
   }
 }
 // [1.2] ACF - return button/link object //
-function jbcst_acf_return_button($field, $additional_classes = '') {
+function jbcst_acf_return_button($field, $additional_classes = '', $arrow = false) {
   if ( $field ) {
 
     $link_url = isset( $field['url'] ) ? $field['url'] : '';
     $link_title = isset( $field['title'] ) ? $field['title'] : '';
     $link_target = ! empty( $field['target'] ) ? $field['target'] : '_self';
     $base_class = 'button-cst';
+    
+    if ( $arrow == true) {
+      $base_class .= ' button-cst__icon-w-btn';
+    }
+    
     $class_attr = $additional_classes ? $base_class . ' ' . $additional_classes : $base_class;
+    $arrow_symbol = $arrow ? '<span class="button-arrow-cst">&#8594;</span>' : '';
 
-    echo '<a class="' . esc_attr( $class_attr ) . '" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">' . esc_html( $link_title ) . '</a>';
+    echo '<a class="' . esc_attr( $class_attr ) . '" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '"><span class="button-text-cst">' . esc_html( $link_title ) . '</span>' . $arrow_symbol . '</a>';
 
   }
 }

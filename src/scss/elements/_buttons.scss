@@ -16,32 +16,17 @@
     transition: all var(--transition-speed);
     position: relative;
   }
+  .button-arrow-cst {
+    right: 0;
+    font-size: var(--font-size-sm);
+  }
   // Icon Element //
   &__icon-w-btn {
-    padding: 0 3.5rem 0 2rem;
-    span {
-      &:after {
-        content: '';
-        background-color: var(--white);
-        transition: all var(--transition-speed);
-        height: 1.6rem;
-        width: 1.6rem;
-        border-radius: 50%;
-        background-color: var(--white);
-        background-image: url('../../imgs/bootstrap-icons/arrow-right.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 75%;
-        position: absolute;
-        left: calc(100% + 0.75rem);
-      }
-    }
+    @include inline-flex(row, nowrap, flex-start, center, 1rem);
+
     &:hover {
-      span {
-        &:after {
-          background-color: var(--highlight-core-blue);
-          translate: 0.25rem 0;
-        }
+      .button-arrow-cst {
+        right: -0.25rem;
       }
     }
   }
