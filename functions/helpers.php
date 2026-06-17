@@ -59,6 +59,20 @@ function jbcst_acf_return_img_field($img, $class = null) {
     echo 'Error #1: ACF helper function used without plugin instance.';
   }
 }
+// [1.2] ACF - return button/link object //
+function jbcst_acf_return_button($field, $additional_classes = '') {
+  if ( $field ) {
+
+    $link_url = isset( $field['url'] ) ? $field['url'] : '';
+    $link_title = isset( $field['title'] ) ? $field['title'] : '';
+    $link_target = ! empty( $field['target'] ) ? $field['target'] : '_self';
+    $base_class = 'button-cst';
+    $class_attr = $additional_classes ? $base_class . ' ' . $additional_classes : $base_class;
+
+    echo '<a class="' . esc_attr( $class_attr ) . '" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">' . esc_html( $link_title ) . '</a>';
+
+  }
+}
 // Return theme options instead of needing to do it each call //
 function jbcst_acf_return_option_field($fieldname) {
   if(class_exists('ACF')) {
