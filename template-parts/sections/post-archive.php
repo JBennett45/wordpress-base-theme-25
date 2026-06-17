@@ -52,7 +52,8 @@ if($wp_query) {
     </div>
     <div class="container-cst news-listings-cst__load-more">
       <button class="load-more-posts-btn-cst button-cst button-cst--primary button-cst__icon-w-btn">
-        <span>Load more</span>
+        <span class="button-text-cst">Load more</span>
+        <span class="button-arrow-cst">&#8594;</span>
       </button>
     </div>
     </post-archive-listing>

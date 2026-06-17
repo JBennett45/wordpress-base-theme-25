@@ -27,7 +27,13 @@ $breakpoints: (
   align-items: $align;
   gap: $gap;
 }
-
+@mixin inline-flex($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: inline-flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
 // Remove Scrollbars - used with - @include remove-scrollbars() //
 @mixin remove-scrollbars() {
   -webkit-overflow-scrolling: touch;
