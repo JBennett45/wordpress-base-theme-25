@@ -11,7 +11,7 @@ function jbcst_wp_return_wpmenu($menuName, $className, $chevron) {
           'container' => false,
           'menu' => __( $menuReturn->name, 'base-theme' ),
           'menu_class' => $className,
-          'link_after' => '<div class="bst-opt-chevron-active-cst">' . file_get_contents( get_template_directory_uri() . '/assets/imgs/bootstrap-icons/chevron-down.svg') . '</div>'
+          'link_after' => '<div class="bst-opt-chevron-active-cst">' . file_get_contents( get_theme_file_path() . '/assets/imgs/bootstrap-icons/chevron-down.svg') . '</div>'
         ));
       } else {
         wp_nav_menu(array(
