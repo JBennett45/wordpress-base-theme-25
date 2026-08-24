@@ -64,4 +64,7 @@ function jb_cst_pagination_os($pages = '', $range = 2) {
 		echo "</div>";	
 	}
 }
+add_action( 'after_setup_theme', function() {
+    add_theme_support( 'title-tag' );
+} );
 ?>

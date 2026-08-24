@@ -11,7 +11,7 @@ function jbcst_wp_return_wpmenu($menuName, $className, $chevron) {
           'container' => false,
           'menu' => __( $menuReturn->name, 'base-theme' ),
           'menu_class' => $className,
-          'link_after' => '<div class="bst-opt-chevron-active-cst">' . file_get_contents( get_template_directory_uri() . '/assets/imgs/bootstrap-icons/chevron-down.svg') . '</div>'
+          'link_after' => '<div class="bst-opt-chevron-active-cst">' . file_get_contents( get_theme_file_path() . '/assets/imgs/bootstrap-icons/chevron-down.svg') . '</div>'
         ));
       } else {
         wp_nav_menu(array(
@@ -40,7 +40,7 @@ function jbcst_acf_return_text_field($field, $tag = null) {
   }
 }
 // [1.1] ACF - return active image field wrapped in img & alt - has to be array rerutn //
-function jbcst_acf_return_img_field($img, $class = null) {
+function jbcst_acf_return_img_field($img, $class = null, $eager = false) {
   if(class_exists('ACF')) {
     // check value //
     if($img && is_array($img)) { 
@@ -48,11 +48,15 @@ function jbcst_acf_return_img_field($img, $class = null) {
       $returnedAlt = $img['alt'];
     } 
     else {
-      $returnedSrc = get_template_directory_uri().'/screenshot.png';
+      $returnedSrc = get_template_directory_uri().'/assets/imgs/placeholder.png';
       $returnedAlt = get_bloginfo() . ' - awaiting image'; 
     }
-    $imgClass = $class ? 'class="' . $class . '"' : null;
-    echo '<img src="' . $returnedSrc . '" alt="' . $returnedAlt . '" '. $imgClass .'>';
+    
+    $imgClass = $class ? 'class="' . $class . '"' : '';
+    $loading  = 'loading="' . ($eager ? 'eager' : 'lazy') . '"';
+
+    // Send it //
+    echo '<img src="' . $returnedSrc . '" alt="' . $returnedAlt . '" ' . $imgClass . ' ' . $loading . '>';
     return;
   } 
   else {

@@ -50,11 +50,29 @@ function jb_cst_theme_login_style() {
 	wp_enqueue_style( 'cst-login-css' );	
 }
 add_action( 'login_enqueue_scripts', 'jb_cst_theme_login_style' );
-// preload fonts //
-function jb_cst_font_preload() {
-	echo '<link rel="preload" href="' . get_theme_file_uri() . '/assets/fonts/montserrat/montserrat-light.ttf' . '" as="font" type="font/woff" crossorigin>'; 
-	echo '<link rel="preload" href="' . get_theme_file_uri() . '/assets/fonts/montserrat/montserrat-regular.ttf' . '" as="font" type="font/woff" crossorigin>'; 
-	echo '<link rel="preload" href="' . get_theme_file_uri() . '/assets/fonts/montserrat/montserrat-bold.ttf' . '" as="font" type="font/woff" crossorigin>'; 
-};
-add_action( 'wp_head', 'jb_cst_font_preload' );
+// Preload fonts //
+add_action( 'wp_head', 'my_theme_auto_preload_fonts', 2 );
+function my_theme_auto_preload_fonts() {
+    $font_dir_path = get_template_directory() . '/assets/fonts/';
+    $font_dir_url  = get_template_directory_uri() . '/assets/fonts/';
+
+    if ( ! is_dir( $font_dir_path ) ) {
+			return;
+    }
+
+		$font_files = glob( $font_dir_path . '*.woff2' );
+
+    if ( empty( $font_files ) ) {
+			return;
+    }
+
+    foreach ( $font_files as $file_path ) {
+        $filename = basename( $file_path );
+
+        echo sprintf(
+            '<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin="anonymous">' . "\n",
+            esc_url( $font_dir_url . $filename )
+        );
+    }
+}
 ?>
