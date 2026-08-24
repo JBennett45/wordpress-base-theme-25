@@ -2,9 +2,10 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-
-  <title><?php bloginfo( 'name' ); ?></title>
-  <meta name="description" content="<?php bloginfo( 'description' ); ?>">
+  <?php if ( ! defined( 'WPSEO_FILE' ) ) : ?>
+    <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
+    <meta name="description" content="<?php bloginfo( 'description' ); ?>">
+  <?php endif; ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
